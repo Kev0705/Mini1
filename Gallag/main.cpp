@@ -5,6 +5,7 @@ int main(void) {
 	StartScreen startmenu;
 	
 	start.startsc();
+	startmenu.screen();
 	for (;;)
 	{
 		startmenu.cursor();

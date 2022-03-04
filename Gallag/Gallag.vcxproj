@@ -147,6 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="draw.cpp" />
+    <ClCompile Include="gotoxy.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stagesize.cpp" />
     <ClCompile Include="startcreen.cpp" />

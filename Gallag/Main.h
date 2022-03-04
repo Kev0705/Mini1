@@ -5,3 +5,5 @@
 #include <conio.h>
 
 #include "Stage.h"
+
+void gotoxy(int x,int y);
