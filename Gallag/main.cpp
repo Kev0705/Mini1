@@ -4,17 +4,13 @@
 /* 함 수 선 언 */
 void init();
 void titleDraw();
+void menuDraw();
 void gotoxy(int, int);
 
 int main() {
 	init();
 	titleDraw();
-
-	gotoxy(2, 2);
-	printf("2, 2에 서  출 력 !");
-	gotoxy(30, 10);
-	printf("30, 10에 서 출 력 !");
-
+	menuDraw();
 	return 0;
 }
 
@@ -30,6 +26,15 @@ void titleDraw(){
 	printf("     #   #   #   #      # # #       #####      # # #        #         #####  \n");
 	printf("      # #     # #      #     #      #  #      #     #       #         #  #   \n");
 	printf("       #       #      #       #     #   #    #       #    #####       #   #  \n");
+}
+
+void menuDraw() {
+	gotoxy(24 - 2, 12); // -2 한 이 유 는 > 를 출 력 해 야 하 기 때 문 에
+	printf("> 게 임 시 작");
+	gotoxy(24, 13);
+	printf("게 임 정 보");
+	gotoxy(24, 14);
+	printf("   종 료   ");
 }
 
 // 커 서  위 치  이 동 함 수
