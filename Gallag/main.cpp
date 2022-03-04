@@ -1,5 +1,5 @@
 #include <stdio.h>
-<<<<<<< HEAD
+
 #include <Windows.h>
 
 /* 함 수 선 언 */
@@ -35,15 +35,4 @@ void gotoxy(int x, int y) {
 	pos.Y = y;
 	SetConsoleCursorPosition(consoleHandle, pos);
 }
-=======
 
-int main() { 
-	printf("\n\n\n\n"); // 맨 위 에 4칸 개 행
-	printf("   #       #       #      #         #####        #        #####       #####  \n");
-	printf("    #     # #     #      # #        #    #      # #         #         #    # \n");
-	printf("     #   #   #   #      # # #       #####      # # #        #         #####  \n");
-	printf("      # #     # #      #     #      #  #      #     #       #         #  #   \n");
-	printf("       #       #      #       #     #   #    #       #    #####       #   #  \n");
-	return 0;
-}
->>>>>>> 039bec023d90068c940aad379353963145684129
