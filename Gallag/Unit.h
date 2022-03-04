@@ -10,3 +10,8 @@ class Ally
 
 
 };
+
+class Enemy
+{
+
+};
