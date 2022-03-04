@@ -146,7 +146,9 @@
     <ClInclude Include="UserInterface.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="draw.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="screen.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
