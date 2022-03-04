@@ -11,6 +11,7 @@ class StartScreen {
 private:
 
 public:
-	void screen();
+	void logo();
 	void cursor();
+	void menu();
 };
