@@ -16,7 +16,7 @@ int main() {
 
 /* 함 수  구 현 */
 void init() {
-	system("mode con cols=56 lines=20 | title 게 임 제 목 ");
+	system("mode con cols=56 lines=50 | title 게 임 제 목 ");
 }
 
 void titleDraw(){
@@ -29,11 +29,11 @@ void titleDraw(){
 }
 
 void menuDraw() {
-	gotoxy(24 - 2, 12); // -2 한 이 유 는 > 를 출 력 해 야 하 기 때 문 에
+	gotoxy(35 - 2, 18); // -2 한 이 유 는 > 를 출 력 해 야 하 기 때 문 에
 	printf("> 게 임 시 작");
-	gotoxy(24, 13);
+	gotoxy(35, 20);
 	printf("게 임 정 보");
-	gotoxy(24, 14);
+	gotoxy(35, 22);
 	printf("   종 료   ");
 }
 
