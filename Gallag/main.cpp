@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 #include <Windows.h>
 
 /* 함 수 선 언 */
