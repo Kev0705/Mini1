@@ -29,11 +29,11 @@ void titleDraw(){
 }
 
 void menuDraw() {
-	gotoxy(35 - 2, 18); // -2 한 이 유 는 > 를 출 력 해 야 하 기 때 문 에
+	gotoxy(35 - 2, 17); // -2 한 이 유 는 > 를 출 력 해 야 하 기 때 문 에
 	printf("> 게 임 시 작");
-	gotoxy(35, 20);
+	gotoxy(35, 19);
 	printf("게 임 정 보");
-	gotoxy(35, 22);
+	gotoxy(35, 21);
 	printf("   종 료   ");
 }
 
