@@ -9,6 +9,12 @@ void gotoxy(int, int);
 int main() {
 	init();
 	titleDraw();
+
+	gotoxy(2, 2);
+	printf("2, 2에 서  출 력 !");
+	gotoxy(30, 10);
+	printf("30, 10에 서 출 력 !");
+
 	return 0;
 }
 
@@ -34,4 +40,3 @@ void gotoxy(int x, int y) {
 	pos.Y = y;
 	SetConsoleCursorPosition(consoleHandle, pos);
 }
-
