@@ -4,6 +4,7 @@
 #include <windows.h>
 #include <conio.h>
 
+#include "UserInterface.h"
 #include "Stage.h"
-
-void gotoxy(int x,int y);
+#include "Util.h"
+#include "Function.h"

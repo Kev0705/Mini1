@@ -21,7 +21,7 @@
     <ClInclude Include="UserInterface.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Event.h">
+    <ClInclude Include="Function.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Stage.h">
@@ -30,12 +30,15 @@
     <ClInclude Include="Unit.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="draw.cpp">
+    <ClCompile Include="logo.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="startcreen.cpp">
@@ -45,6 +48,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="gotoxy.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="startscreen_cursor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="selectstartmenu.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

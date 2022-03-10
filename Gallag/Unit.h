@@ -5,13 +5,14 @@ class Unit
 
 };
 
-class Ally 
+class Ally : Unit
 {
 
 
 };
 
-class Enemy
+class Enemy : Unit
 {
+
 
 };
