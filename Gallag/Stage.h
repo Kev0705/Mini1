@@ -1,9 +1,11 @@
 #pragma once
 #include <cursor.h>
-#include <stdio.h>
+#include <stdio.h>	
+#include <conio.h>
+#define putchxy(x, y ,c) {gotoxy(x,y); _putch(c);};
+#define putsxy(x, y, s) {gotoxy(x, y);puts(s);};
 
 class Stage {
-
 
 };
 
@@ -48,17 +50,36 @@ class inGame : Stage
 {
 private:
 	int x, y;
+	char ch;
 public:
-	inGame(int ax, int ay) { x = ax; y = ay; }
+	inGame(int ax, int ay, char ach) { x = ax; y = ay; ch = ach; }
 	void life() {
-		gotoxy(x, y); printf("Life : ", ); //하트 asc코드 확인하고 해당 부분 아군기체 피해시 깍는 로직 필요
+		gotoxy(x, y); printf("Life : ♥♥♥"); //하트 asc코드 확인하고 해당 부분 아군기체 피해시 깍는 로직 필요
+	}
 
-	}
 	void score() {
-		gotoxy(x, y); printf("score: %d", ); // 점수 쌓는 로직 생성 후 추가 필요
+		gotoxy(x, y); printf("score: 000000"); // 점수 쌓는 로직 생성 후 추가 필요
 	}
+
 	void ReturnScreen() {
 		gotoxy(x, y); printf("R: 이전화면");
-
 	}
+
+	void BackScreen() {
+		gotoxy(x, y);
+		if (x = 0); {
+			for (x = 0; x < 60; x++) {
+				putchxy(x, y, '-');
+			}
+		}
+	}
+	void SideScreen() {
+		gotoxy(x, y);
+		if (y = 3); {
+			for (y = 3; y < 25; y++) {
+				putchxy(x, y, '|');
+			}
+		}
+	}
+	
 };
