@@ -139,14 +139,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Event.h" />
-    <ClInclude Include="Main.h" />
-    <ClInclude Include="Stage.h" />
-    <ClInclude Include="Unit.h" />
-    <ClInclude Include="UserInterface.h" />
+    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="gamescene.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="player.h" />
+    <ClInclude Include="unit.h" />
+    <ClInclude Include="발사체.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="gamescene.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="player.cpp" />
+    <ClCompile Include="unit.cpp" />
+    <ClCompile Include="발사체.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
