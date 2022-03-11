@@ -9,7 +9,9 @@ class Stage {
 
 };
 
-class starting : Stage
+
+
+/*class starting : Stage
 {
 private:
 	int x, y;
@@ -29,7 +31,7 @@ public:
 	}
 
 };
-
+*/
 class Guide : Stage
 {
 private:
@@ -52,7 +54,7 @@ private:
 	int x, y;
 	char ch;
 public:
-	inGame(int ax, int ay, char ach) { x = ax; y = ay; ch = ach; }
+	inGame(int ax, int ay) { x = ax; y = ay; }
 	void life() {
 		gotoxy(x, y); printf("Life : ♥♥♥"); //하트 asc코드 확인하고 해당 부분 아군기체 피해시 깍는 로직 필요
 	}
@@ -68,16 +70,16 @@ public:
 	void BackScreen() {
 		gotoxy(x, y);
 		if (x = 0); {
-			for (x = 0; x < 60; x++) {
-				putchxy(x, y, '-');
+			for (x = 3; x <160 ; x++) {
+				putchxy(x, y, '#');
 			}
 		}
 	}
 	void SideScreen() {
 		gotoxy(x, y);
 		if (y = 3); {
-			for (y = 3; y < 25; y++) {
-				putchxy(x, y, '|');
+			for (y = 3; y < 40; y++) {
+				putchxy(x, y, '#');
 			}
 		}
 	}

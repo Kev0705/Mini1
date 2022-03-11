@@ -6,7 +6,7 @@
 #include <iostream>
 
 
-int start() {
+/*int start() {
 	starting s(10, 5);
 	s.Name();
 	starting e(0, 0);
@@ -16,43 +16,39 @@ int start() {
 
 	return 0;
 }
-
+*/
 
 
 int ingame() {		//인게임 화면
-	inGame hp(20, 0, ' ');
+	inGame hp(20, 0);
 	hp.life();
 	
-	inGame h(0, 2, '-');
+	inGame h(0, 2);
 	h.BackScreen();
 
-	inGame t(0, 25, '-');
+	inGame t(0, 40);
 	t.BackScreen();
 	
-	inGame l(0, 3, '|');
+	inGame l(10, 3);
 	l.SideScreen();
 
-	inGame r(60, 3, '|');
+	inGame ll(20, 3);
+	ll.SideScreen();
+
+	inGame rr(150, 3);
+	rr.SideScreen();
+
+	inGame r(160, 3);
 	r.SideScreen();
 
-	starting e(0, 0);
-	e.End();
-
-	inGame sco(50, 0, ' ');
-	sco.score();
-			
-	starting s(0, 28);
-	s.Name();
-
-
-	inGame re(50, 28, ' ');
+	inGame re(50, 28);
 	re.ReturnScreen();
 
 	return 0;
 			
 }
 
-int Mapchange() {
+/*int Mapchange() {
 	int ch;
 	for (;;) {
 			ch = _getch();
@@ -85,3 +81,4 @@ int Mapchange() {
 		}
 
 }
+*/
