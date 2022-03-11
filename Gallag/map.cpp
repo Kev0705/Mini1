@@ -3,34 +3,39 @@
 
 void BackScreen() 
 {
-	int y = 20;
-	for (int x = 0; x < 160; x++)
+	int y = 5;
+	for (int x = 10; x < 155; x++)
 		putchxy(x, y, '#');
+	for (int x = 10; x < 155; x++)
+		putchxy(x, y+40, '#');
 }
 
 void SideScreen()
 {
-	int x = 20;
-	for (int y = 3; y < 40; y++)
+	int x = 10;
+	for (int y = 5; y < 45; y++)
 		putchxy(x, y, '#');
+	for (int y = 5; y < 46; y++)
+		putchxy(x+145, y, '#');
 };
+
+void Sideline() 
+{
+	int x = 30;
+	for (int y = 5; y < 45; y++)
+		putchxy(x , y, '#');
+	for (int y = 5; y < 46; y++)
+		putchxy(x + 105, y, '#');
+}
 
 void inGame::map()
 {
 	system("cls");
-	printf("1111");
-	putchxy(5, 5, '#');
-	
-	int y = 20;
-	for (int x = 0; x < 160; x++)
-	{
-		putchxy(x, y, '#');
-	}
-	int x = 20;
-	for (int y = 3; y < 40; y++)
-	{
-		putchxy(x, y, '#');
-	}
+
+	BackScreen();
+	SideScreen();
+	Sideline();
+
 	//void BackScreen();
 	//void SideScreen();
 

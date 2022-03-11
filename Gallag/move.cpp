@@ -17,6 +17,12 @@ void Function::MoveFlight(int& x, int& y)
             y++;
         }
 
+        if (x < 30) x = x + 2;
+        if (x >= 132) x = x - 2;
+
+        if (y >= 45) y = y - 2;
+        if (y <= 10) y = y + 2;
+
         gotoxy(x, y);
         printf("<O>"); // 추후 Unit 쪽으로 분리시킬 예정
 

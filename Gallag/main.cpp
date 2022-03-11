@@ -24,7 +24,7 @@ int main(void) {
 		}
 		else if(page==GAME)
 		{
-			int posx = 100;
+			int posx = 85;
 			int posy = 40;
 			inGame i;
 			i.map();
