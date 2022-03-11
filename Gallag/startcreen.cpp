@@ -11,7 +11,7 @@ void StartScreen::menu(int &x,int &y)
 
 	posy = posy + 2; // 게임 시작 2칸 밑에 스코어
 
-	gotoxy(posx-5, posy);
+	gotoxy(posx-5, posy); 
 	printf("▷    스코어");
 	
 	posy = posy + 2; // 스코어 두 칸 밑에 게임종료

@@ -37,14 +37,14 @@ public:
     }
 };
 
-class Select
+class Select : Function
 {
 #define UP 72
 #define DOWN 80
 #define LEFT 75
 #define RIGHT 77
-#define ENTER 
-#define SPACEBAR 
+#define ENTER 13
+#define SPACEBAR 32
 };
 
 class SelectMenu : Select 

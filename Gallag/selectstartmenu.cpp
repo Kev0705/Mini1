@@ -4,7 +4,6 @@
 
 void SelectStartMenu::MenuSelect(int &x,int &y)
 {
-
     if(_kbhit())
 	{   
         //메뉴 선택 (상,하만 동작)
@@ -26,14 +25,13 @@ void SelectStartMenu::MenuSelect(int &x,int &y)
             if (y > 34) y = 30;
             break;
         
-        //선택하는 경우
-        /*
         case ENTER:
-
+            printf("enter");
             break;
         case SPACEBAR:
+            printf("space");
             break;
-        */
+
         }
 	}
 }

@@ -11,7 +11,7 @@ int main(void) {
 	start.startsc();
 	startmenu.logo();
 	startmenu.menu(startmenu.posx,startmenu.posy);
-	
+
 	for (;;)
 	{
 		startmenu.PrintCursor(startmenu.posx,startmenu.posy);
