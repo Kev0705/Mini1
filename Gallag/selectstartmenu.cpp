@@ -2,7 +2,7 @@
 #include "Main.h"
 #include <time.h>
 
-void SelectStartMenu::MenuSelect(int &x,int &y)
+int SelectStartMenu::MenuSelect(int &x,int &y,int &page)
 {
     if(_kbhit())
 	{   
@@ -26,12 +26,12 @@ void SelectStartMenu::MenuSelect(int &x,int &y)
             break;
         
         case ENTER:
-            printf("enter");
+            page = 1;
             break;
         case SPACEBAR:
-            printf("space");
+            page = 1;
             break;
-
         }
 	}
+    return 0;
 }

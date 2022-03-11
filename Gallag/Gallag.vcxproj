@@ -147,9 +147,12 @@
     <ClInclude Include="Util.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="fire.cpp" />
     <ClCompile Include="logo.cpp" />
     <ClCompile Include="gotoxy.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="map.cpp" />
+    <ClCompile Include="move.cpp" />
     <ClCompile Include="selectstartmenu.cpp" />
     <ClCompile Include="stagesize.cpp" />
     <ClCompile Include="startcreen.cpp" />

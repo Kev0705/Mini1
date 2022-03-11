@@ -2,6 +2,6 @@
 
 void Stage::startsc(){
 
-	system("mode con: cols=150 lines=50");
+	system("mode con: cols=170 lines=50");
 
 };
