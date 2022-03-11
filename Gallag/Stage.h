@@ -30,14 +30,5 @@ class inGame : Stage
 private:
 
 public:
-	void ingame() 
-	{
-		system("cls");
-		void life();
-		void score();
-		void ReturnScreen();
-		// 위에거 작동안함 구현해야됨
-		void BackScreen();
-		void SideScreen();
-	}
+	void map();
 };

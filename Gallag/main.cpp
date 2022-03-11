@@ -9,7 +9,7 @@ int main(void) {
 	SelectStartMenu selectstartmenu;
 
 	enum{START,GAME,SCORE}; //START = 0 , GAME = 1, SCORE =2
-	int page = 0;
+	int page = 0; 
 
 	start.startsc();
 	startmenu.logo();
@@ -24,8 +24,16 @@ int main(void) {
 		}
 		else if(page==GAME)
 		{
+			int posx = 100;
+			int posy = 40;
 			inGame i;
-			i.ingame();
+			i.map();
+			// 맵 생성 후 멀티스레드 적용 후 무한반복 끝낼때 page값을 리턴하여 빠져나오기
+			f.MoveFlight(posx,posy);
+		}
+		else if (page == SCORE) 
+		{
+
 		}
 	}
 

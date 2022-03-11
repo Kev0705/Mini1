@@ -11,10 +11,8 @@ int SelectStartMenu::MenuSelect(int &x,int &y,int &page)
         switch (c)
         {
         case LEFT:
-
             break;
         case RIGHT:
-
             break;
         case UP:
             y = y - 2;
@@ -25,6 +23,7 @@ int SelectStartMenu::MenuSelect(int &x,int &y,int &page)
             if (y > 34) y = 30;
             break;
         
+        //게임 시작
         case ENTER:
             page = 1;
             break;
