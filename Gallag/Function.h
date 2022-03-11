@@ -43,6 +43,8 @@ class Select
 #define DOWN 80
 #define LEFT 75
 #define RIGHT 77
+#define ENTER 
+#define SPACEBAR 
 };
 
 class SelectMenu : Select 
