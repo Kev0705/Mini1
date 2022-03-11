@@ -15,45 +15,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Bullet.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="gamescene.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="player.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="unit.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="발사체.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="rocket.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="발사체.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
     <ClCompile Include="main.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Bullet.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="gamescene.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="player.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="unit.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="발사체.cpp">
+    <ClCompile Include="rocket.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
