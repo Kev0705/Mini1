@@ -48,7 +48,7 @@ int ingame() {		//인게임 화면
 	inGame re(50, 28, ' ');
 	re.ReturnScreen();
 
-	return 1;
+	return 0;
 			
 }
 
@@ -75,6 +75,10 @@ int Mapchange() {
 				case'S':
 					clrscr();
 					return ingame();
+				case 'r':
+				case 'R':
+					clrscr();
+					return start();
 
 				}
 			}
