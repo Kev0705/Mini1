@@ -1,5 +1,6 @@
 #include <iostream>
 #include<ctime>
+
 #include"TimeDelay.h"
 
 TimeDelay::TimeDelay() {
@@ -9,7 +10,7 @@ TimeDelay::TimeDelay() {
 	finish = clock();*/
 }
 
-void TimeDelay::timeSet(int du) {
+void TimeDelay::timeSet(double du) {
 	duration = du; //sec
 	start = clock();
 }

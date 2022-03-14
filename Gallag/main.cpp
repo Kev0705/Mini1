@@ -15,7 +15,7 @@ int main(void) {
 	startmenu.logo();
 	startmenu.menu(startmenu.posx,startmenu.posy);
 	TimeDelay T;
-	T.timeSet(1);
+	T.timeSet(0.2);
 
 	for (;;)
 	{

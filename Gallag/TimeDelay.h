@@ -1,7 +1,7 @@
 #pragma once
 class TimeDelay {
 private:
-	int duration;
+	double duration;
 	clock_t start;
 	clock_t finish;
 	bool token;
@@ -9,7 +9,7 @@ public:
 
 	TimeDelay();
 
-	void timeSet(int du);
+	void timeSet(double du);
 	void timeSet();
 
 	bool timeToken();
