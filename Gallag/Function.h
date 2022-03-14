@@ -6,9 +6,11 @@ class Function {
 private:
     
     enum { UP, DOWN, LEFT, RIGHT };
+    int x=85;
+    int y=40;
 	
 public:
-    void MoveFlight(int& x, int& y);
+    void MoveFlight();
 };
 
 class Select : Function

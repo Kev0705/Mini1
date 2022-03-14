@@ -24,12 +24,10 @@ int main(void) {
 		}
 		else if(page==GAME)
 		{
-			int posx = 85;
-			int posy = 40;
 			inGame i;
 			i.map();
 			// 맵 생성 후 멀티스레드 적용 후 무한반복 끝낼때 page값을 리턴하여 빠져나오기
-			f.MoveFlight(posx,posy);
+			f.MoveFlight();
 		}
 		else if (page == SCORE) 
 		{
