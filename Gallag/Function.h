@@ -6,9 +6,12 @@ class Function {
 private:
     
     enum { UP, DOWN, LEFT, RIGHT };
+    
 	
 public:
     void MoveFlight(int& x, int& y);
+    int * mydx;
+    int * mydy;
 };
 
 class Select : Function
@@ -33,4 +36,14 @@ private:
     char c;
 public:
     int MenuSelect(int& x, int&y,int &page);
+};
+
+class Crash : Function
+{
+private:
+   
+public:
+    void lasercrash();
+    
+ 
 };
