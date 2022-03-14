@@ -32,11 +32,30 @@ int SelectStartMenu::MenuSelect(int &x,int &y,int &page)
         
         //게임 시작
         case ENTER:
-            page = 1;
-            break;
+            switch (y) {
+            case 30:
+                page = 1;
+                break;
+            case 32:
+                page = 2;
+                break;
+            case 34:
+                page = 3;
+                break;
+            }
+            
         case SPACEBAR:
-            page = 1;
-            break;
+            switch (y) {
+            case 30:
+                page = 1;
+                break;
+            case 32:
+                page = 2;
+                break;
+            case 34:
+                page = 3;
+                break;
+            }
         }
 	}
     return 0;

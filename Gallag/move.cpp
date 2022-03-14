@@ -1,6 +1,6 @@
 #include "Main.h"
 
-void Function::MoveFlight()
+void Function::MoveFlight(StartScreen S, int& page)
 {
     TimeDelay T;
     T.timeSet(0.1);
@@ -8,6 +8,13 @@ void Function::MoveFlight()
     while(true) // 화면 전체 초기화 유의. 나중에 멀티스레드로 화면 전체 띄울 수 있는지 확인. 아마 안될듯ㅋㅋ
     {
         if (T.timeDelay() == true) {
+            if (KeyScan()) {
+                page = 0;
+                system("cls");
+                S.logo();
+                S.menu();
+                break;
+            }
             int x1 = x;
             int y1 = y;
             if (GetAsyncKeyState(VK_LEFT) & 0x8000) { //왼쪽

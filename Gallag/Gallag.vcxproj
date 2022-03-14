@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClInclude Include="Function.h" />
     <ClInclude Include="Main.h" />
+    <ClInclude Include="Score.h" />
     <ClInclude Include="Stage.h" />
     <ClInclude Include="TimeDelay.h" />
     <ClInclude Include="Unit.h" />
@@ -154,6 +155,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="map.cpp" />
     <ClCompile Include="move.cpp" />
+    <ClCompile Include="Score.cpp" />
     <ClCompile Include="selectstartmenu.cpp" />
     <ClCompile Include="stagesize.cpp" />
     <ClCompile Include="startcreen.cpp" />

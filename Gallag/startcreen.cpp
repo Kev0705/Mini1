@@ -1,10 +1,10 @@
 #include "Main.h"
 
-void StartScreen::menu(int &x,int &y) 
+void StartScreen::menu() 
 {
 	//콘솔의 처음 위치에서부터 위치 지정 default : posx=0, posy=0 StartScreen Class의 선언 내에서 확인하세요.
-	posx = x+70;
-	posy = y+30;
+	posx = 70;
+	posy = 30;
 
 	gotoxy(posx-5, posy);
 	printf("▷    게임 시작");

@@ -1,7 +1,7 @@
 #pragma once
 #include "Main.h"
 
-class Function {
+class Function :inGame {
 	
 private:
     
@@ -10,7 +10,8 @@ private:
     int y=40;
 	
 public:
-    void MoveFlight();
+    
+    void MoveFlight(StartScreen S, int& page);
 };
 
 class Select : Function
@@ -21,6 +22,7 @@ class Select : Function
 #define RIGHT 77
 #define ENTER 13
 #define SPACEBAR 32
+#define ESC 27
 };
 
 class SelectMenu : Select 

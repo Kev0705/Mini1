@@ -9,3 +9,5 @@
 #include "Util.h"
 #include "Function.h"
 #include "TimeDelay.h"
+#include "Score.h"
+#include "Function.h"
