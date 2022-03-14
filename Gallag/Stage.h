@@ -20,9 +20,9 @@ public:
 	int posx = 0;
 	int posy = 0;
 	void logo();
-	void cursor();
-	void menu(int &x, int &y);
-	void PrintCursor(int x, int y);
+	void menu();
+	void PrintCursor();
+	void PrintCursor_blink();
 };
 
 class inGame : Stage
@@ -30,5 +30,11 @@ class inGame : Stage
 private:
 
 public:
+	void BackScreen();
+	void SideScreen();
+	void Sideline();
+	void Esc();
+	bool KeyScan();
 	void map();
 };
+

@@ -141,7 +141,9 @@
   <ItemGroup>
     <ClInclude Include="Function.h" />
     <ClInclude Include="Main.h" />
+    <ClInclude Include="Score.h" />
     <ClInclude Include="Stage.h" />
+    <ClInclude Include="TimeDelay.h" />
     <ClInclude Include="Unit.h" />
     <ClInclude Include="UserInterface.h" />
     <ClInclude Include="Util.h" />
@@ -153,11 +155,12 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="map.cpp" />
     <ClCompile Include="move.cpp" />
+    <ClCompile Include="Score.cpp" />
     <ClCompile Include="selectstartmenu.cpp" />
     <ClCompile Include="stagesize.cpp" />
     <ClCompile Include="startcreen.cpp" />
     <ClCompile Include="startscreen_cursor.cpp" />
-    <ClCompile Include="crash.cpp" />
+    <ClCompile Include="TimeDelay.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

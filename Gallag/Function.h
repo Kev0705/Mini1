@@ -1,17 +1,17 @@
 #pragma once
 #include "Main.h"
 
-class Function {
+class Function :inGame {
 	
 private:
     
     enum { UP, DOWN, LEFT, RIGHT };
-    
+    int x=85;
+    int y=40;
 	
 public:
-    void MoveFlight(int& x, int& y);
-    int * mydx;
-    int * mydy;
+    
+    void MoveFlight(StartScreen S, int& page);
 };
 
 class Select : Function
@@ -22,6 +22,7 @@ class Select : Function
 #define RIGHT 77
 #define ENTER 13
 #define SPACEBAR 32
+#define ESC 27
 };
 
 class SelectMenu : Select 
