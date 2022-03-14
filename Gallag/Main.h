@@ -5,6 +5,7 @@
 #include <conio.h>
 #include <fstream>
 #include <direct.h>
+#include <algorithm>
 
 #include "UserInterface.h"
 #include "Stage.h"
