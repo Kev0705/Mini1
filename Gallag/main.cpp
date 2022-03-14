@@ -7,6 +7,8 @@ int main(void) {
 	StartScreen startmenu;
 	Function f;
 	SelectStartMenu selectstartmenu;
+	Fire fe;
+
 
 	enum{START,GAME,SCORE}; //START = 0 , GAME = 1, SCORE =2
 	int page = 0; 
@@ -29,7 +31,9 @@ int main(void) {
 			inGame i;
 			i.map();
 			// 맵 생성 후 멀티스레드 적용 후 무한반복 끝낼때 page값을 리턴하여 빠져나오기
-			f.MoveFlight(posx,posy);
+			f.MoveFlight(posx, posy);
+			//fe.FireShoot(posx, posy);
+			
 		}
 		else if (page == SCORE) 
 		{
