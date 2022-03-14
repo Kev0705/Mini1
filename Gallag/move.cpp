@@ -45,6 +45,7 @@ void Function::MoveFlight(StartScreen S, int& page)
             printf("<O>"); // 추후 Unit 쪽으로 분리시킬 예정
            
         }
+        fe.FireShoot(x, y);
         
     }
 }

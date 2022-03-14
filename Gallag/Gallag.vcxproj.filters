@@ -71,10 +71,13 @@
     <ClCompile Include="map.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="TimeDelay.cpp">
+    <ClCompile Include="Score.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Score.cpp">
+    <ClCompile Include="crash.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeDelay.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

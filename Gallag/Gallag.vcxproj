@@ -149,6 +149,7 @@
     <ClInclude Include="Util.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="crash.cpp" />
     <ClCompile Include="fire.cpp" />
     <ClCompile Include="logo.cpp" />
     <ClCompile Include="gotoxy.cpp" />
@@ -160,6 +161,7 @@
     <ClCompile Include="stagesize.cpp" />
     <ClCompile Include="startcreen.cpp" />
     <ClCompile Include="startscreen_cursor.cpp" />
+    <ClCompile Include="TimeDelay.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

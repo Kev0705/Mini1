@@ -8,6 +8,7 @@ int main(void) {
 	Function f;
 	SelectStartMenu selectstartmenu;
 	TimeDelay T;
+
 	T.timeSet(0.2);
 	
 	enum{START,GAME,SCORE}; //START = 0 , GAME = 1, SCORE =2
@@ -44,6 +45,7 @@ int main(void) {
 			i.map();
 			// 맵 생성 후 멀티스레드 적용 후 무한반복 끝낼때 page값을 리턴하여 빠져나오기
 			f.MoveFlight(startmenu, page);
+			
 		}
 		else if (page == SCORE) 
 		{
