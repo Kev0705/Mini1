@@ -18,7 +18,7 @@ void TimeDelay::timeSet() {
 	start = clock();
 }
 
-bool TimeDelay::timeDelay() {
+bool TimeDelay::timeDelayToken() {
 	finish = clock();
 
 	if (duration <= (double)(finish - start) / CLOCKS_PER_SEC) {
@@ -29,6 +29,18 @@ bool TimeDelay::timeDelay() {
 		return token;
 	}
 
+}
+
+bool TimeDelay::timeDelay() {
+	finish = clock();
+
+	if (duration <= (double)(finish - start) / CLOCKS_PER_SEC) {
+		timeSet();
+		return true;
+	}
+	else {
+		return false;
+	}
 }
 
 bool TimeDelay::timeToken() {

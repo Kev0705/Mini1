@@ -21,7 +21,7 @@ int main(void) {
 	{
 		if(page==START)
 		{
-		if (T.timeDelay() == 0) {
+		if (T.timeDelayToken() == 0) {
 			startmenu.PrintCursor(startmenu.posx, startmenu.posy);
 		}
 		else

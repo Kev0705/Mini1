@@ -1,6 +1,5 @@
 #pragma once
 #include "Main.h"
-#include <time.h>
 
 int SelectStartMenu::MenuSelect(int &x,int &y,int &page)
 {
@@ -15,10 +14,18 @@ int SelectStartMenu::MenuSelect(int &x,int &y,int &page)
         case RIGHT:
             break;
         case UP:
+            //클래스 함수로 가져오는 방법 생각
+            gotoxy(x - 5, y); 
+            printf_s("▷");
+
             y = y - 2;
             if (y < 30) y = 34;
             break;
         case DOWN:
+            //클래스 함수로 가져오는 방법 생각
+            gotoxy(x - 5, y); 
+            printf_s("▷");
+
             y = y + 2;
             if (y > 34) y = 30;
             break;

@@ -10,10 +10,10 @@ public:
 	TimeDelay();
 
 	void timeSet(int du);
-
 	void timeSet();
 
-	bool timeDelay();
-
 	bool timeToken();
+	bool timeDelayToken();
+
+	bool timeDelay();
 };
