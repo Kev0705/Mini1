@@ -47,3 +47,14 @@ public:
     
  
 };
+
+class Fire : Function
+
+{
+private:
+
+public:
+    void Fireshoot(int &x, int &y);
+    int *ldx;
+    int *ldy;
+};
