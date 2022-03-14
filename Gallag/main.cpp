@@ -14,12 +14,20 @@ int main(void) {
 	start.startsc();
 	startmenu.logo();
 	startmenu.menu(startmenu.posx,startmenu.posy);
+	TimeDelay T;
+	T.timeSet(1);
 
 	for (;;)
 	{
 		if(page==START)
 		{
-		startmenu.PrintCursor(startmenu.posx,startmenu.posy);
+		if (T.timeDelay() == 0) {
+			startmenu.PrintCursor(startmenu.posx, startmenu.posy);
+		}
+		else
+		{
+			startmenu.PrintCursor_blink(startmenu.posx, startmenu.posy);
+		}
 		selectstartmenu.MenuSelect(startmenu.posx, startmenu.posy,page);
 		}
 		else if(page==GAME)

@@ -22,6 +22,7 @@ public:
 	void logo();
 	void menu(int &x, int &y);
 	void PrintCursor(int x, int y);
+	void PrintCursor_blink(int x, int y);
 };
 
 class inGame : Stage
