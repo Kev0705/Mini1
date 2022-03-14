@@ -3,6 +3,8 @@
 #include <iostream>
 #include <windows.h>
 #include <conio.h>
+#include <fstream>
+#include <direct.h>
 
 #include "UserInterface.h"
 #include "Stage.h"

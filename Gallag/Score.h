@@ -5,6 +5,6 @@ private:
 
 public:
 	void map();
-	void showScore(StartScreen S, int& page);
+	void showScore(StartScreen S, int& page, const char* dir);
 };
 
