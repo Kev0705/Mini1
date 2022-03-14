@@ -1,5 +1,5 @@
 #include "Main.h"
-
+Fire fe;
 
 void Function::MoveFlight(int& x, int& y)
 {
@@ -28,8 +28,7 @@ void Function::MoveFlight(int& x, int& y)
         mydx = &x; // 충돌함수에서 사용할 좌표
         mydy = &y; // 충돌함수에서 사용할 좌표
         printf("<O>"); // 추후 Unit 쪽으로 분리시킬 예정
-        
-       
+        fe.FireShoot(x, y);
     }
             
 

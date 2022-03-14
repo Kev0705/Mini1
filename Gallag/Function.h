@@ -5,7 +5,7 @@ class Function {
 	
 private:
     
-    enum { UP, DOWN, LEFT, RIGHT, SPACEBAR };
+    enum { UP, DOWN, LEFT, RIGHT };
     
 	
 public:
@@ -48,13 +48,14 @@ public:
  
 };
 
-class Fire : Function
+class Fire
 
 {
 private:
- 
+    char c;
 public:
     void FireShoot(int &x, int &y);
+    void Shooter(int& x, int& y);
     int *ldx;
     int *ldy;
 };
