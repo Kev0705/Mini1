@@ -8,10 +8,16 @@ private:
     enum { UP, DOWN, LEFT, RIGHT };
     int x=85;
     int y=40;
+    int* Lx = NULL;//내위치
+    int* Ly = NULL;//내위치
+    int* Fx = NULL;//발사체 위치
+    int* Fy = NULL;//발사체 위치
 	
 public:
     
     void MoveFlight(StartScreen S, int& page);
+    void lasercrash();
+    void FireShoot(int &x3, int &y3);
 };
 
 class Select : Function
@@ -39,23 +45,3 @@ public:
     int MenuSelect(int& x, int&y,int &page);
 };
 
-class Crash : Function
-{
-private:
-   
-public:
-    void lasercrash();
-    
- 
-};
-
-class Fire
-
-{
-private:
-    char c;
-
-public:
-    void FireShoot(int x, int y);
-
-};

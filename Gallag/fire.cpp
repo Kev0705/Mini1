@@ -1,28 +1,36 @@
 #include "Main.h"
-void Fire::FireShoot(int x, int y) // 내가 쏘는 발사체 
+void Function::FireShoot(int& x3, int& y3) // 내가 쏘는 발사체 
 {
+    int y;
+    int x;
     TimeDelay T;
     T.timeSet(0.1);
-
+    char c;
     if (_kbhit()) {
         c = _getch();
-        switch (c) {
+         switch (c) {
         case SPACEBAR:
-            int HY = y - 1;
-            int x2 = x;
-            while (HY>6) {
-                
-                Sleep(20);
-                HY--;
-                gotoxy(x2, HY);
+            x = *Lx;
+            
+            y = 5;
+            
+            
+            while (y <= 44) {
+
+                T.timeSet(0.01);
+                y++;
+                gotoxy(x,y);
                 printf("@");
-                Sleep(30);
-                gotoxy(x2, HY);
-                printf(" ");
+                Fx = &x;
+                Fy = &y;
+                lasercrash();
+                //Sleep(30);
+                //gotoxy(Fx, Fy);
+                //printf(" ");
                 
             }
         }
     }
+
     
 }
-

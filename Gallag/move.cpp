@@ -1,5 +1,5 @@
 #include "Main.h"
-Fire fe;
+
 
 void Function::MoveFlight(StartScreen S, int& page)
 {
@@ -43,9 +43,12 @@ void Function::MoveFlight(StartScreen S, int& page)
             y = y1;
             gotoxy(x, y);
             printf("<O>"); // 추후 Unit 쪽으로 분리시킬 예정
-           
+            Lx = &x;
+            Ly = &y;
         }
-        fe.FireShoot(x, y);
         
+        FireShoot(*Lx, *Ly);
+      //  lasercrash();
     }
+    
 }
