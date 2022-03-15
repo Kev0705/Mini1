@@ -147,6 +147,7 @@
     <ClInclude Include="Unit.h" />
     <ClInclude Include="UserInterface.h" />
     <ClInclude Include="Util.h" />
+    <ClInclude Include="cursor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="crash.cpp" />
@@ -162,6 +163,7 @@
     <ClCompile Include="startcreen.cpp" />
     <ClCompile Include="startscreen_cursor.cpp" />
     <ClCompile Include="TimeDelay.cpp" />
+    <ClCompile Include="CreatEnemy.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -46,6 +46,7 @@ int main(void) {
 			inGame i;
 			i.map();
 			// 맵 생성 후 멀티스레드 적용 후 무한반복 끝낼때 page값을 리턴하여 빠져나오기
+			f.CreatEnemy();
 			f.MoveFlight(startmenu, page);
 			
 			

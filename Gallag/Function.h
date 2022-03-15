@@ -18,6 +18,7 @@ public:
     void MoveFlight(StartScreen S, int& page);
     void lasercrash();
     void FireShoot(int &x3, int &y3);
+    void CreatEnemy();
 };
 
 class Select : Function
