@@ -54,7 +54,6 @@ class Fire
 {
 private:
     char c;
-    bool token;
 
 
 public:
