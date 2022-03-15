@@ -36,7 +36,7 @@ void Score::showScore(StartScreen S, int& page, const char *dir)
 
 	for (;;) {
 		
-		if (KeyScan()) {
+		if (KeyScan(ESC)) {
 			page = 0;
 			system("cls");
 			S.logo();

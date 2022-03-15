@@ -54,6 +54,8 @@ class Fire
 {
 private:
     char c;
+    bool token;
+
 
 public:
     void FireShoot(int x, int y);
