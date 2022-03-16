@@ -29,16 +29,16 @@ int main(void) {
 		//현재 score 제대로 동작 안함
 		//현재 score 제대로 동작 안함
 		//현재 score 제대로 동작 안함
+	//스코어가 무한loop에 갇혀 계속 생성됨에 따라 생기는 오류로 추정
 
 	int posx = 85;
 	int posy = 40;
 	int fire_x; //현재 이 변수 사용 x 관리용
 	int fire_y; //현재 이 변수 사용 x 관리용
 
-
-
 	startmenu.logo();
 	startmenu.menu();
+	
 	for (;;)
 	{
 		if(page==START)
@@ -70,20 +70,8 @@ int main(void) {
 
 			std::future<void> c = std::async(std::launch::async, [&]() {f.CreatEnemy(); });
 
+			//std::future<void> d = std::async(std::launch::async, [&]() { /*fuction*/});
 
-
-
-			//std::thread t1([&]() { f.MoveFlight(posx, posy); });
-			//std::thread t2([&]() { f.FireShoot(posx,posy,fire_x,fire_y); });
-
-			
-			//t1.join();
-			//t2.join();
-
-			
-			//f.MoveFlight(posx,posy);
-			//e.enemyspawn();
-			//f.FireShoot(posx,posy);
 
 		}
 		else if (page == SCORE) 

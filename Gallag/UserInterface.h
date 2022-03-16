@@ -1,7 +1,8 @@
 #pragma once
 #include "Main.h"
 
-class UserInterface {
+class UserInterface 
+{
 
 
 };
