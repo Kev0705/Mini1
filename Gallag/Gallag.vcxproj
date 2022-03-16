@@ -143,6 +143,8 @@
     <ClInclude Include="Main.h" />
     <ClInclude Include="Score.h" />
     <ClInclude Include="Stage.h" />
+    <ClInclude Include="ThreadPool.h" />
+    <ClInclude Include="ThreadPool_.h" />
     <ClInclude Include="TimeDelay.h" />
     <ClInclude Include="Unit.h" />
     <ClInclude Include="UserInterface.h" />
@@ -161,6 +163,8 @@
     <ClCompile Include="stagesize.cpp" />
     <ClCompile Include="startcreen.cpp" />
     <ClCompile Include="startscreen_cursor.cpp" />
+    <ClCompile Include="ThreadPool.cpp" />
+    <ClCompile Include="ThreadPool_.cpp" />
     <ClCompile Include="TimeDelay.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -10,7 +10,7 @@ private:
 public:
     
     void MoveFlight(int &posx, int &posy);
-    void FireShoot(int posx, int posy);
+    bool FireShoot(std::vector<int> &vect);
 };
 
 class Select : Function

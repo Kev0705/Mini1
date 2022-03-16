@@ -1,27 +1,27 @@
 #include "Main.h"
 
-void Function::FireShoot(int posx, int posy)
+bool Function::FireShoot(std::vector<int> &vect)
 {
+    //TimeDelay T;
+    //T.timeSet(0.1);
 
-    int x = posx;
-    int y = posy;
-    
-    gotoxy(80, 20);
-    printf("absdb");
+    //int x = posx + 1; // 발사체를 기체의 정중앙에 고정하기 위함
+    //int y = posy - 1; // 발사체를 기체의 정중앙에 고정하기 위함
 
-    x = posx + 1; // 발사체를 기체의 정중앙에 고정하기 위함
-    y = posy -1; // 발사체를 기체의 정중앙에 고정하기 위함
+    //if (T.timeDelay()==true) {
 
-    if (GetAsyncKeyState(VK_SPACE) & 0x8000) {
-        while (y > 6)
-        {
-            gotoxy(x, y);
-            printf("@");
-            Sleep(30);
-            gotoxy(x, y);
-            printf(" ");
-            Sleep(30);
-            y--;
-        }
+    if (vect[1] != 6) {
+        gotoxy(vect[0], vect[1]);
+        printf(" ");
+        vect[1]--;
+        gotoxy(vect[0], vect[1]);
+        printf("@");
+        return true;
     }
+    else 
+        return false;
+    
+        
+    //}
+
  }

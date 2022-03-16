@@ -7,7 +7,15 @@
 #include <direct.h>
 #include <algorithm>
 #include <string>
+#include <thread>
+#include <condition_variable>
 #include <mutex>
+#include <chrono>
+#include <cstdio>
+#include <functional>
+#include <future>
+#include <queue>
+#include <vector>
 
 #include "UserInterface.h"
 #include "Stage.h"
@@ -17,3 +25,5 @@
 #include "Score.h"
 #include "Function.h"
 #include "Unit.h"
+#include "ThreadPool_.h"
+#include "ThreadPool.h"

@@ -36,10 +36,10 @@ int main(void) {
 	TimeDelay T_gameFrame;
 	T_gameFrame.timeSet(0.1);
 
-	
 	bool startToken = true;
 	bool gameToken = false;
 	bool scoreToken = false;
+	bool spaceToken = false;
 
 	enum{START,GAME,SCORE}; //START = 0 , GAME = 1, SCORE =2
 	int page = 0; 
@@ -55,6 +55,9 @@ int main(void) {
 
 	int posx = 85;
 	int posy = 40;
+
+	std::vector<std::vector<int>> fireVector(10);
+	
 
 	for (;;)
 	{
@@ -76,7 +79,8 @@ int main(void) {
 		}
 		else if(page==GAME)
 		{
-			
+		
+
 			if (gameToken == true) {
 				i.map();
 				gameToken = false;
@@ -87,10 +91,27 @@ int main(void) {
 				startToken = true;
 				system("cls");
 			}
+			else if (GetAsyncKeyState(VK_SPACE) & 0x8000) {
+				spaceToken = true;
+			}
 			
 			if (T_gameFrame.timeDelay() == true) {
 				f.MoveFlight(posx, posy);
-				f.FireShoot(posx, posy);
+
+				for (std::vector<std::vector<int>>::iterator IterPos = fireVector.begin(); IterPos != fireVector.end();++IterPos) {
+
+					if (f.FireShoot(*IterPos) == false) { //FireShoot()실행시 error 발생
+						IterPos = fireVector.erase(IterPos);
+					}
+					
+				}
+				if (spaceToken) {
+					std::vector<int> xyVector;
+					xyVector.push_back(posx);
+					xyVector.push_back(posy);
+					fireVector.push_back(xyVector);
+				}
+
 			}
 
 			//e.enemyspawn();
