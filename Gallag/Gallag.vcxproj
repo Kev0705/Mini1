@@ -143,7 +143,6 @@
     <ClInclude Include="Main.h" />
     <ClInclude Include="Score.h" />
     <ClInclude Include="Stage.h" />
-    <ClInclude Include="TimeDelay.h" />
     <ClInclude Include="Unit.h" />
     <ClInclude Include="UserInterface.h" />
     <ClInclude Include="Util.h" />

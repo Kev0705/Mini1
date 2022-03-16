@@ -1,7 +1,9 @@
+#pragma once
+
 #include <iostream>
 #include<ctime>
+#include "Main.h"
 
-#include"TimeDelay.h"
 
 TimeDelay::TimeDelay() {
 	token = true;

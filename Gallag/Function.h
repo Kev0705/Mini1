@@ -2,18 +2,19 @@
 #include "Main.h"
 #include <tuple>
 
-class Function :inGame {
+class Function {
 	
 private:
-    std::mutex m1;
+    std::mutex m1; // 해당 <mutex> m1
+
     enum { UP, DOWN, LEFT, RIGHT };
 	
 public:
     
-    void MoveFlight(int &posx, int &posy);
-    void FireShoot(int &posx, int &posy,int& fire_x, int& fire_y);
+    void MoveFlight(int &posx, int &posy); //mutex m1 사용
+    void FireShoot(int &posx, int &posy,int& fire_x, int& fire_y); //mutex m1 사용
     void bullet();
-    void CreatEnemy();
+    void CreatEnemy(); //mutex m1 사용
 };
 
 class Select : Function

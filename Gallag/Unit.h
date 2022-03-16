@@ -17,7 +17,5 @@ class Ally : Unit
 class Enemy : Unit
 {
 public:
-	void enemyspawn();
-	std::string a = "<->";
 
 };
