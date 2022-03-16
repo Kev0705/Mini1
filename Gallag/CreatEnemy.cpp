@@ -4,8 +4,8 @@
 
 void Function::CreatEnemy() //랜덤으로 생성은 되는데 이걸 움직이게 할려면 머리가 아픕니다.
 {
-	TimeDelay T;
-	T.timeSet(0.1);
+	//TimeDelay T;
+	//T.timeSet(0.1);
 
 	while (true) {
 

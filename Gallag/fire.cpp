@@ -6,33 +6,32 @@ void Function::FireShoot(int& x3, int& y3) // 내가 쏘는 발사체
     TimeDelay T;
     T.timeSet(0.1);
     while (true) {
-         char c;
-            if (_kbhit()) {
-                c = _getch();
-                switch (c) {
-                case SPACEBAR:
-                    x = *Lx+1;
-                    y = *Ly-1;
+        if (GetAsyncKeyState(VK_SPACE) & 0x8000) {
+            FireShoot(x, y);
 
-                    while (y > 6) {
-                        
-                        y--;
-                        if (T.timeDelay() == true) {
-                            gotoxy(x, y);
-                            printf("@");
-                            Fx = &x;
-                            Fy = &y;
-                            lasercrash();
-                        }
-                        if (T.timeDelay() == true) {
-                        gotoxy(x, y);
-                        printf(" ");
+            x = *Lx + 1;
+            y = *Ly;
+            while (y > 7) {
 
-                    }
-                }
+                y--;
+                gotoxy(x, y - 1);
+                printf("@");
+                Fx = &x;
+                Fy = &y;
+                lasercrash();
+
             }
+            x = *Lx + 1;
+            y = *Ly;
+            T.timeDelay();
+            while (y > 6) {
+                y--;
+                gotoxy(x, y);
+                printf(" ");
+
+            }break;
 
         }
     }
-     
+
 }

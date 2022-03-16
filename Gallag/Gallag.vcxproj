@@ -164,6 +164,9 @@
     <ClCompile Include="startscreen_cursor.cpp" />
     <ClCompile Include="TimeDelay.cpp" />
     <ClCompile Include="CreatEnemy.cpp" />
+    <ClCompile Include="EnemyUnit.cpp" />
+    <ClCompile Include="EnemyStats.cpp" />
+    <ClCompile Include="EnemyMove.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

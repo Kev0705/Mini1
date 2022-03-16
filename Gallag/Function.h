@@ -8,10 +8,10 @@ private:
     enum { UP, DOWN, LEFT, RIGHT };
     int x=85;
     int y=40;
-    int* Lx = NULL;//내위치
-    int* Ly = NULL;//내위치
-    int* Fx = NULL;//발사체 위치
-    int* Fy = NULL;//발사체 위치
+    int* Lx = NULL; //내위치
+    int* Ly = NULL; //내위치
+    int* Fx = NULL; //발사체 위치
+    int* Fy = NULL; //발사체 위치
 	
 public:
     

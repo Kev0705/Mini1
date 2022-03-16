@@ -6,7 +6,7 @@ void Function::MoveFlight(StartScreen S, int& page)
     TimeDelay T;
     T.timeSet(0.1);
 
-    while(true) // 화면 전체 초기화 유의. 나중에 멀티스레드로 화면 전체 띄울 수 있는지 확인. 아마 안될듯ㅋㅋ
+    while (true) // 화면 전체 초기화 유의. 나중에 멀티스레드로 화면 전체 띄울 수 있는지 확인. 아마 안될듯ㅋㅋ
     {
         if (T.timeDelay() == true) {
             if (KeyScan()) {
@@ -31,6 +31,7 @@ void Function::MoveFlight(StartScreen S, int& page)
                 y1 += 1;
             }
 
+
             if (x1 < 30) x1 += 2;
             if (x1 >= 132) x1 -= 2;
 
@@ -41,14 +42,18 @@ void Function::MoveFlight(StartScreen S, int& page)
             printf("   ");
             x = x1;
             y = y1;
+
             gotoxy(x, y);
             printf("<O>"); // 추후 Unit 쪽으로 분리시킬 예정
             Lx = &x;
             Ly = &y;
+
+
+
         }
-        
-        FireShoot(*Lx, *Ly);
-      //  lasercrash();
+
     }
-    
+
+
+
 }

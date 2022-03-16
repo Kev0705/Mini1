@@ -86,5 +86,14 @@
     <ClCompile Include="CreatEnemy.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="EnemyUnit.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyStats.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyMove.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
