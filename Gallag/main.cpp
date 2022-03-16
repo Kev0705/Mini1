@@ -1,4 +1,5 @@
 #pragma once 
+#include <thread>
 #include "Main.h"
 
 int main(void) {
@@ -23,6 +24,9 @@ int main(void) {
 		std::ofstream fout(curDir);
 	}
 
+	int posx = 85;
+	int posy = 40;
+
 	startmenu.logo();
 	startmenu.menu();
 	for (;;)
@@ -41,9 +45,19 @@ int main(void) {
 		else if(page==GAME)
 		{
 			inGame i;
+			Enemy e;
 			i.map();
 			// 맵 생성 후 멀티스레드 적용 후 무한반복 끝낼때 page값을 리턴하여 빠져나오기
-			f.MoveFlight(startmenu, page);
+
+			std::thread t1([&]() {f.MoveFlight(posx,posy); });
+			std::thread t2([&]() {e.enemyspawn(); });
+			//std::thread t3([&]() {fire.FireShoot();});
+
+			t1.join();
+			t2.join();
+
+			//f.MoveFlight(page);
+			//e.enemyspawn();
 		}
 		else if (page == SCORE) 
 		{
@@ -51,8 +65,6 @@ int main(void) {
 			i.map();
 			i.showScore(startmenu, page, curDir);
 		}
-		
-			
 	}
 
 	//f.MoveFlight(startmenu.posx,startmenu.posy);

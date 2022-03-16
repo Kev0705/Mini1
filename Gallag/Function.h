@@ -6,12 +6,11 @@ class Function :inGame {
 private:
     
     enum { UP, DOWN, LEFT, RIGHT };
-    int x=85;
-    int y=40;
 	
 public:
     
-    void MoveFlight(StartScreen S, int& page);
+    void MoveFlight(int &posx, int &posy);
+    void FireShoot(int x, int y);
 };
 
 class Select : Function

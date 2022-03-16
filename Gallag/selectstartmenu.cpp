@@ -40,7 +40,7 @@ int SelectStartMenu::MenuSelect(int &x,int &y,int &page)
                 page = 2;
                 break;
             case 34:
-                page = 3;
+                exit(0);
                 break;
             }
             
@@ -53,7 +53,7 @@ int SelectStartMenu::MenuSelect(int &x,int &y,int &page)
                 page = 2;
                 break;
             case 34:
-                page = 3;
+                exit(0);
                 break;
             }
         }

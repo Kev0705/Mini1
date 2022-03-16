@@ -1,4 +1,7 @@
-#pragma once
+#include "Main.h"
+
+using namespace std::literals;
+
 class Unit 
 {
 
@@ -13,6 +16,8 @@ class Ally : Unit
 
 class Enemy : Unit
 {
-
+public:
+	void enemyspawn();
+	std::string a = "<->";
 
 };
