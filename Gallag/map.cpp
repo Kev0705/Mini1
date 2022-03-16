@@ -33,18 +33,6 @@ void inGame::Esc() {
 	printf("ESC:돌아가기");
 }
 
-/*
-bool inGame::KeyScan() {
-	if (_kbhit())
-	{
-		char c = _getch();
-		if (c == ESC)
-			return true;
-	}
-
-	return false;
-}
-*/
 
 void inGame::map()
 {

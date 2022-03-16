@@ -35,5 +35,5 @@ class SelectStartMenu : SelectMenu
 private:
     char c;
 public:
-    int MenuSelect(int& x, int&y,int &page);
+    int MenuSelect(int& x, int&y,int &page, bool& gameToken, bool& scoreToken);
 };

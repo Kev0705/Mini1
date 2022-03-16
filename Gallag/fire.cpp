@@ -5,41 +5,23 @@ void Function::FireShoot(int posx, int posy)
 
     int x = posx;
     int y = posy;
-
-    TimeDelay T;
-    T.timeSet(0.1);
     
- 
+    gotoxy(80, 20);
+    printf("absdb");
 
-    while (true) 
-    {
-        gotoxy(80, 20);
-        printf("absdb");
-        /*
-        char c;
-        if (_kbhit())
+    x = posx + 1; // 발사체를 기체의 정중앙에 고정하기 위함
+    y = posy -1; // 발사체를 기체의 정중앙에 고정하기 위함
+
+    if (GetAsyncKeyState(VK_SPACE) & 0x8000) {
+        while (y > 6)
         {
-            c = _getch();
-            switch (c)
-            {
-            case SPACEBAR:
-                x = posx + 1; // 발사체를 기체의 정중앙에 고정하기 위함
-                y = -1; // 발사체를 기체의 정중앙에 고정하기 위함
-                while (y > 6)
-                {
-                    if (T.timeDelay() == true)
-                    {
-                        gotoxy(x, y);
-                        printf("@");
-
-                        gotoxy(x, y);
-                        printf(" ");
-                    }
-                }
-            }
-
+            gotoxy(x, y);
+            printf("@");
+            Sleep(30);
+            gotoxy(x, y);
+            printf(" ");
+            Sleep(30);
+            y--;
         }
-        */
     }
-    
  }

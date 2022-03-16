@@ -1,7 +1,7 @@
 #pragma once
 #include "Main.h"
 
-int SelectStartMenu::MenuSelect(int &x,int &y,int &page)
+int SelectStartMenu::MenuSelect(int &x,int &y,int &page, bool &gameToken, bool &scoreToken)
 {
     if(_kbhit())
 	{   
@@ -35,26 +35,28 @@ int SelectStartMenu::MenuSelect(int &x,int &y,int &page)
             switch (y) {
             case 30:
                 page = 1;
+                gameToken = true;
                 break;
             case 32:
                 page = 2;
+                scoreToken = true;
                 break;
             case 34:
                 exit(0);
-                break;
             }
             
         case SPACEBAR:
             switch (y) {
             case 30:
                 page = 1;
+                gameToken = true;
                 break;
             case 32:
                 page = 2;
+                scoreToken = true;
                 break;
             case 34:
                 exit(0);
-                break;
             }
         }
 	}
