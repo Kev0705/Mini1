@@ -8,7 +8,7 @@ void Enemy::EnemyMove() {
 	Sleep(20);
 	gotoxy(x, y);
 	printf("   ");
-	while (y < 45) {
+	while (y < 44) {
 		srand(time(NULL));
 		int i = random(4);
 		switch (i)
@@ -27,10 +27,10 @@ void Enemy::EnemyMove() {
 			break;
 		}
 		
-		if (x < 30) {
+		if (x < 31) {
 			x += 2;
 		}
-		if (x > 131) {
+		if (x > 130) {
 			x -= 2;
 		}
 		Ex = &x;
