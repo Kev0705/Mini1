@@ -2,22 +2,19 @@
 
 void Function::FireShoot(int posx, int posy)
 {
-    static std::mutex fMutex;
-    
+
     int x = posx;
     int y = posy;
 
     TimeDelay T;
     T.timeSet(0.1);
     
-    
+ 
 
     while (true) 
     {
         gotoxy(80, 20);
-        fMutex.lock();
         printf("absdb");
-        fMutex.unlock();
         /*
         char c;
         if (_kbhit())
