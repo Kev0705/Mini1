@@ -1,16 +1,19 @@
 #pragma once
 #include "Main.h"
+#include <tuple>
 
 class Function :inGame {
 	
 private:
-    
+    std::mutex m1;
     enum { UP, DOWN, LEFT, RIGHT };
 	
 public:
     
     void MoveFlight(int &posx, int &posy);
-    void FireShoot(int posx, int posy);
+    void FireShoot(int &posx, int &posy,int& fire_x, int& fire_y);
+    void bullet();
+    void CreatEnemy();
 };
 
 class Select : Function

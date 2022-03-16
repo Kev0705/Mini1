@@ -1,45 +1,86 @@
 #include "Main.h"
 
-void Function::FireShoot(int posx, int posy)
+void Function::FireShoot(int &posx, int &posy,int& fire_x, int& fire_y)
+{
+	TimeDelay F;
+	F.timeSet(0.05);
+
+	while(true)
+	{
+		int bullet_x = posx+1; //posx,posy 레퍼런스로 받음
+		int bullet_y = posy-1;
+
+		if (_kbhit())
+		{
+			char c;
+			c = _getch();
+
+			if (c == SPACEBAR)
+			{
+				
+
+				for(int i = 0 ; i<50;i++)
+				{
+					m1.lock();
+
+						gotoxy(bullet_x, bullet_y);
+						std::cout << '!';
+
+
+						gotoxy(bullet_x, bullet_y+1);
+						std::cout << ' ';
+					
+					m1.unlock();
+
+						Sleep(25);
+						bullet_y--;
+
+						if (bullet_y < 6) {
+
+							m1.lock();
+							gotoxy(bullet_x, bullet_y+1); // 벽 끝에 닿았을때 없애고 반복문 탈출
+							std::cout << ' ';
+							m1.unlock();
+
+							break;
+						}
+
+				}
+
+				
+
+			}
+
+		}
+	}
+
+
+	/*
+	TimeDelay F; //fire 딜레이
+	F.timeSet(0.05);
+
+	TimeDelay B; //Bullet 딜레이
+	B.timeSet(0.015);
+	
+	if (GetAsyncKeyState(VK_SPACE) & 0x8000)
+	{
+		int fire_x = posx + 1;
+		int fire_y = posy - 1;
+
+		while (fire_y > 5)
+		{
+			if (B.timeDelay() == true)
+			{
+				gotoxy(fire_x, fire_y);
+				std::cout << '@';
+				fire_y--;
+			}
+		}
+	}
+	*/
+}
+
+void Function::bullet() 
 {
 
-    int x = posx;
-    int y = posy;
-
-    TimeDelay T;
-    T.timeSet(0.1);
-    
- 
-
-    while (true) 
-    {
-        gotoxy(80, 20);
-        printf("absdb");
-        /*
-        char c;
-        if (_kbhit())
-        {
-            c = _getch();
-            switch (c)
-            {
-            case SPACEBAR:
-                x = posx + 1; // 발사체를 기체의 정중앙에 고정하기 위함
-                y = -1; // 발사체를 기체의 정중앙에 고정하기 위함
-                while (y > 6)
-                {
-                    if (T.timeDelay() == true)
-                    {
-                        gotoxy(x, y);
-                        printf("@");
-
-                        gotoxy(x, y);
-                        printf(" ");
-                    }
-                }
-            }
-
-        }
-        */
-    }
-    
- }
+};

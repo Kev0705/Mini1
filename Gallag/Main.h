@@ -8,6 +8,8 @@
 #include <algorithm>
 #include <string>
 #include <mutex>
+#include <tuple>
+#include <thread>
 
 #include "UserInterface.h"
 #include "Stage.h"
