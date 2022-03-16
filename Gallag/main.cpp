@@ -2,6 +2,7 @@
 #include <thread>
 #include "Main.h"
 
+
 int main(void) {
 	Stage start;
 	start.startsc();
@@ -46,15 +47,19 @@ int main(void) {
 		{
 			inGame i;
 			Enemy e;
+			
 			i.map();
 			// 맵 생성 후 멀티스레드 적용 후 무한반복 끝낼때 page값을 리턴하여 빠져나오기
 
 			std::thread t1([&]() {f.MoveFlight(posx,posy); });
+			
 			std::thread t2([&]() {e.enemyspawn(); });
-			//std::thread t3([&]() {fire.FireShoot();});
+			
+			std::thread t3([&]() {f.FireShoot(posx,posy); });
 
 			t1.join();
 			t2.join();
+			t3.join();
 
 			//f.MoveFlight(page);
 			//e.enemyspawn();

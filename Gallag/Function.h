@@ -10,7 +10,7 @@ private:
 public:
     
     void MoveFlight(int &posx, int &posy);
-    void FireShoot(int x, int y);
+    void FireShoot(int posx, int posy);
 };
 
 class Select : Function

@@ -2,6 +2,8 @@
 
 void Function::MoveFlight(int& posx, int& posy) // main.cpp 내에서 선언된 posx,posy를 직접적으로 받아 조정
 {
+    static std::mutex mutex;
+
     TimeDelay T;
     T.timeSet(0.1);
 
@@ -30,12 +32,16 @@ void Function::MoveFlight(int& posx, int& posy) // main.cpp 내에서 선언된 posx,p
             if (posy <= 10) posy += 1;
             if (posy >= 45) posy -= 1;
 
+            mutex.lock();
+
             gotoxy(x1, y1);
             std::cout<<("   ");
-            //x = x1;
-            //y = y1;
+
+
             gotoxy(posx, posy);
             std::cout<<("<O>"); // 추후 Unit 쪽으로 분리시킬 예정  
+        
+            mutex.unlock();
         }
     }
 }

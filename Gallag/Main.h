@@ -7,6 +7,7 @@
 #include <direct.h>
 #include <algorithm>
 #include <string>
+#include <mutex>
 
 #include "UserInterface.h"
 #include "Stage.h"
