@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClInclude Include="rocket.h" />
     <ClInclude Include="발사체.h" />
+    <ClInclude Include="적발사체.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -148,6 +149,7 @@
     <ClCompile Include="rocket.cpp" />
     <ClCompile Include="unit.cpp" />
     <ClCompile Include="발사체.cpp" />
+    <ClCompile Include="적발사체.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
