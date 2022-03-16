@@ -3,6 +3,6 @@
 
 void Enemy::EnemyStats() {
 	srand(time(NULL));
-	x = (random(30)*3)+32;
+	x = (random(30)*3)+32;//최초 시작위치
 	y = 6; 
 }

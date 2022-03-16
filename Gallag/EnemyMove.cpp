@@ -10,7 +10,7 @@ void Enemy::EnemyMove() {
 	printf("   ");
 	while (y < 44) {
 		srand(time(NULL));
-		int i = random(4);
+		int i = random(3);//3가지 경우의 수를 랜덤하게 생성
 		switch (i)
 		{
 		case 0:
@@ -22,10 +22,9 @@ void Enemy::EnemyMove() {
 		case 2:
 			x-=1;
 			break;
-		case 3:
-			y++;
-			break;
+		
 		}
+		y++; // 좌우로 안움직여도 최소한 아래로는 움직임
 		
 		if (x < 31) {
 			x += 2;
