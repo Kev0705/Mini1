@@ -1,4 +1,7 @@
-#pragma once
+#include "Main.h"
+
+using namespace std::literals;
+
 class Unit 
 {
 

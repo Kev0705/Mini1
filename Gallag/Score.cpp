@@ -34,15 +34,5 @@ void Score::showScore(StartScreen S, int& page, const char *dir)
 
 	fin.close();
 
-	for (;;) {
-		
-		if (KeyScan()) {
-			page = 0;
-			system("cls");
-			S.logo();
-			S.menu();
-			break;
-		}
-	}
 
 };

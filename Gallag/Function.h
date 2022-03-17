@@ -1,24 +1,20 @@
 #pragma once
 #include "Main.h"
+#include <tuple>
 
-class Function :inGame {
+class Function {
 	
 private:
-    
+    std::mutex m1; // 해당 <mutex> m1
+
     enum { UP, DOWN, LEFT, RIGHT };
-    int x=85;
-    int y=40;
-    int* Lx = NULL; //내위치
-    int* Ly = NULL; //내위치
-    int* Fx = NULL; //발사체 위치
-    int* Fy = NULL; //발사체 위치
 	
 public:
     
-    void MoveFlight(StartScreen S, int& page);
-    void lasercrash();
-    void FireShoot(int &x3, int &y3);
-    void CreatEnemy();
+    void MoveFlight(int &posx, int &posy); //mutex m1 사용
+    void FireShoot(int &posx, int &posy,int& fire_x, int& fire_y); //mutex m1 사용
+    void bullet();
+    void CreatEnemy(); //mutex m1 사용
 };
 
 class Select : Function

@@ -143,20 +143,21 @@
     <ClInclude Include="Main.h" />
     <ClInclude Include="Score.h" />
     <ClInclude Include="Stage.h" />
-    <ClInclude Include="TimeDelay.h" />
     <ClInclude Include="Unit.h" />
     <ClInclude Include="UserInterface.h" />
     <ClInclude Include="Util.h" />
     <ClInclude Include="cursor.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="crash.cpp" />
+    <ClCompile Include="enemyspawn.cpp" />
     <ClCompile Include="fire.cpp" />
     <ClCompile Include="logo.cpp" />
     <ClCompile Include="gotoxy.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="map.cpp" />
     <ClCompile Include="move.cpp" />
+    <ClCompile Include="print.cpp" />
+    <ClCompile Include="random.cpp" />
     <ClCompile Include="Score.cpp" />
     <ClCompile Include="selectstartmenu.cpp" />
     <ClCompile Include="stagesize.cpp" />

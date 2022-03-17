@@ -6,13 +6,15 @@
 #include <fstream>
 #include <direct.h>
 #include <algorithm>
+#include <string>
+#include <mutex>
+#include <tuple>
+#include <thread>
 
 #include "UserInterface.h"
 #include "Stage.h"
 #include "Util.h"
 #include "Function.h"
-#include "TimeDelay.h"
 #include "Score.h"
 #include "Function.h"
-#include "cursor.h"
 #include "Unit.h"

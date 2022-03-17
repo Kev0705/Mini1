@@ -33,9 +33,6 @@
     <ClInclude Include="Util.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="TimeDelay.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Score.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
@@ -96,6 +93,15 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="EnemyCreate.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="enemyspawn.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="print.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="random.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

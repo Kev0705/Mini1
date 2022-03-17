@@ -34,7 +34,6 @@ public:
 	void SideScreen();
 	void Sideline();
 	void Esc();
-	bool KeyScan();
 	void map();
 };
 
