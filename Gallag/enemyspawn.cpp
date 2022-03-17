@@ -47,7 +47,10 @@ void Function::MoveEnemy(std::list<std::vector<int>>& xy_enemy) {
 				gotoxy(enemyVector[0] - 1, enemyVector[1]);
 				std::cout << ("   ");
 				m1.unlock();
+
+				m1.lock();
 				IterPos = xy_enemy.erase(IterPos);
+				m1.unlock();
 				continue;
 			}
 			//현재 좌표 clear 후 밑으로 이동하여 enemy 출력

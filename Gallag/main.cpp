@@ -2,6 +2,7 @@
 
 #include <future>
 #include "Main.h"
+#include <iostream>
 
 int main(void) {
 	Stage start;
@@ -71,26 +72,35 @@ int main(void) {
 			// 전체적으로 레이스 컨디션 문제 해결 안됨 각 스레드별로 sleep값을 이용해서 문제 발생 횟수가 적어진거임
 			
 			//현재 Function 내에 
-			
-			std::future<void> a = std::async(std::launch::async, [&]() {f.MoveFlight(posx, posy); }); //async를 사용했지만 thread 사용해도 동작 같을거라고 예상함
-			
-			std::future<void> b1 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[0]); });
-			std::future<void> b2 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[1]); });
-			std::future<void> b3 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[2]); });
-			std::future<void> b4 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[3]); });
-			std::future<void> b5 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[4]); });
-			std::future<void> b6 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[5]); });
-			std::future<void> b7 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[6]); });
-			std::future<void> b8 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[7]); });
-			std::future<void> b9 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[8]); });
-			std::future<void> b10 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[9]); });
+			try
+			{
+				std::future<void> a = std::async(std::launch::async, [&]() {f.MoveFlight(posx, posy); }); //async를 사용했지만 thread 사용해도 동작 같을거라고 예상함
 
-			std::future<void> c1 = std::async(std::launch::async, [&]() {f.CreatEnemy(xy_enemy); });
-			std::future<void> c2 = std::async(std::launch::async, [&]() {f.MoveEnemy(xy_enemy); });
-			//std::future<void> d = std::async(std::launch::async, [&]() { /*fuction*/});
+				std::future<void> b1 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[0]); });
+				std::future<void> b2 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[1]); });
+				std::future<void> b3 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[2]); });
+				std::future<void> b4 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[3]); });
+				std::future<void> b5 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[4]); });
+				std::future<void> b6 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[5]); });
+				std::future<void> b7 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[6]); });
+				std::future<void> b8 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[7]); });
+				std::future<void> b9 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[8]); });
+				std::future<void> b10 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[9]); });
 
-			std::future<void> d1 = std::async(std::launch::async, [&]() {f.fire_enemy_crush(xy_fire, xy_enemy,score); });
-			std::future<void> d2 = std::async(std::launch::async, [&]() {f.my_enemy_crush(posx, posy, xy_enemy); });
+				std::future<void> c1 = std::async(std::launch::async, [&]() {f.CreatEnemy(xy_enemy); });
+				std::future<void> c2 = std::async(std::launch::async, [&]() {f.MoveEnemy(xy_enemy); });
+				//std::future<void> d = std::async(std::launch::async, [&]() { /*fuction*/});
+
+				std::future<void> d1 = std::async(std::launch::async, [&]() {f.fire_enemy_crush(xy_fire, xy_enemy, score); });
+				std::future<void> d2 = std::async(std::launch::async, [&]() {f.my_enemy_crush(posx, posy, xy_enemy); });
+
+			}
+			catch (const std::exception& ex)
+			{
+				std::cout << "hello";
+			}
+
+			
 
 		}
 		else if (page == SCORE) 

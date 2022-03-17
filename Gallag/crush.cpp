@@ -16,7 +16,9 @@ void Function::fire_enemy_crush(std::vector<std::vector<int>>& xy_fire, std::lis
 					m1.unlock();
 					score += 100;
 					showScore(score);
+					m1.lock();
 					IterEnemy = xy_enemy.erase(IterEnemy);
+					m1.unlock();
 					continue;
 				}
 				IterEnemy++;
@@ -41,6 +43,7 @@ void Function::my_enemy_crush(int& posx, int& posy, std::list<std::vector<int>>&
 				m1.unlock();
 				continue;
 			}
+
 			IterEnemy++;
 		}
 	}
