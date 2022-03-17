@@ -46,8 +46,8 @@ void gotoxy(int x, int y) {
 	SetConsoleCursorPosition(consoleHandle, pos);
 }
 // πﬂªÁ√º 
-	for (int i = 0; i < 5; i++) {
+for (int i = 0; i < 5; i++) {
 		printf("|\n");
 	}
 	return 0;
-}
+
