@@ -12,11 +12,13 @@ private:
 public:
     
     void MoveFlight(int &posx, int &posy); //mutex m1 사용
-    void FireShoot(int &posx, int &posy,int& fire_x, int& fire_y); //mutex m1 사용
+    void FireShoot(int &posx, int &posy, std::vector<int>& xy_fire); //mutex m1 사용
     void bullet();
     void CreatEnemy(std::list<std::vector<int>> &xy); //mutex m1 사용
     void MoveEnemy(std::list<std::vector<int>>& xy);
     void DeleteEnemy(std::list<std::vector<int>>& xy);
+    void fire_enemy_crush(std::vector<std::vector<int>>& xy_fire, std::list<std::vector<int>>& xy_enemy);
+    void my_enemy_crush(int& posx, int& posy, std::list<std::vector<int>>& xy_enemy);
 };
 
 class Select : Function

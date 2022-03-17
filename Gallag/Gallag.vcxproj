@@ -148,6 +148,7 @@
     <ClInclude Include="Util.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="crush.cpp" />
     <ClCompile Include="enemyspawn.cpp" />
     <ClCompile Include="fire.cpp" />
     <ClCompile Include="logo.cpp" />

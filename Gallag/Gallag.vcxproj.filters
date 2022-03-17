@@ -83,5 +83,8 @@
     <ClCompile Include="random.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="crush.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
