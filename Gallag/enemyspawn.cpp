@@ -41,9 +41,16 @@ void Function::MoveEnemy(std::list<std::vector<int>>& xy) {
 
 	while (true) {
 
-		for (std::list<std::vector<int>>::iterator IterPos = xy.begin(); IterPos != xy.end();++IterPos) {
+		for (std::list<std::vector<int>>::iterator IterPos = xy.begin(); IterPos != xy.end();) {
 			std::vector<int> xyVector = *IterPos;
-
+			if (xyVector[1] == 44) {
+				m1.lock();
+				gotoxy(xyVector[0] - 1, xyVector[1]);
+				std::cout << ("   ");
+				m1.unlock();
+				IterPos =xy.erase(IterPos);
+				continue;
+			}
 			m1.lock();
 			gotoxy(xyVector[0] - 1, xyVector[1]);
 			std::cout << ("   ");
@@ -58,6 +65,7 @@ void Function::MoveEnemy(std::list<std::vector<int>>& xy) {
 			gotoxy(xyVector[0] - 1, xyVector[1]);
 			std::cout << ("<=>");
 			m1.unlock();
+			++IterPos;
 		}
 
 		Sleep(300);
