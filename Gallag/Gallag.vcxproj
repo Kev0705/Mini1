@@ -149,6 +149,7 @@
     <ClInclude Include="cursor.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Crash.cpp" />
     <ClCompile Include="enemyspawn.cpp" />
     <ClCompile Include="fire.cpp" />
     <ClCompile Include="logo.cpp" />
@@ -164,7 +165,6 @@
     <ClCompile Include="startcreen.cpp" />
     <ClCompile Include="startscreen_cursor.cpp" />
     <ClCompile Include="TimeDelay.cpp" />
-    <ClCompile Include="CreatEnemy.cpp" />
     <ClCompile Include="EnemyUnit.cpp" />
     <ClCompile Include="EnemyStats.cpp" />
     <ClCompile Include="EnemyMove.cpp" />

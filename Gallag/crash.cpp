@@ -1,7 +1,7 @@
 #include "Main.h"
 
 
-void Function::lasercrash()
+void Function::Crash(int& posx, int& posy, int& fire_x, int& fire_y)
 { 
 	while (true) {
 		if (*Ly == *Fy && *Lx == *Fx)

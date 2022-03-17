@@ -10,6 +10,7 @@
 #include <mutex>
 #include <tuple>
 #include <thread>
+#include <list>
 
 #include "UserInterface.h"
 #include "Stage.h"

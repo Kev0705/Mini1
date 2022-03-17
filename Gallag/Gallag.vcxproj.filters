@@ -74,13 +74,7 @@
     <ClCompile Include="Score.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="crash.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="TimeDelay.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="CreatEnemy.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="EnemyUnit.cpp">
@@ -102,6 +96,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="random.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Crash.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
