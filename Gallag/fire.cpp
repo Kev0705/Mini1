@@ -23,29 +23,27 @@ void Function::FireShoot(int &posx, int &posy,int& fire_x, int& fire_y)
 				{
 					m1.lock();
 
-						gotoxy(bullet_x, bullet_y);
-						std::cout << '!';
+					gotoxy(bullet_x, bullet_y);
+					std::cout << '!';
+					gotoxy(bullet_x, bullet_y+1);
+					std::cout << ' ';
 
-
-						gotoxy(bullet_x, bullet_y+1);
-						std::cout << ' ';
-					
 					m1.unlock();
 
-						Sleep(25); //fire 발사 쿨타임
-						bullet_y--; //buellt의 y좌표를 하나씩 위로 
+					Sleep(25); //fire 발사 쿨타임
+					bullet_y--; //buellt의 y좌표를 하나씩 위로 
 
-						if (bullet_y < 6) {
+					if (bullet_y < 6) {
 
-							m1.lock();
+						m1.lock();
 
-							gotoxy(bullet_x, bullet_y+1); // 벽 끝에 닿았을때 없애고 반복문 탈출
-							std::cout << ' ';
+						gotoxy(bullet_x, bullet_y+1); // 벽 끝에 닿았을때 없애고 반복문 탈출
+						std::cout << ' ';
 
-							m1.unlock();
+						m1.unlock();
 
-							break;
-						}
+						break;
+					}
 
 				}
 

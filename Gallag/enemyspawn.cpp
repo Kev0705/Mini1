@@ -7,7 +7,7 @@ void Function::CreatEnemy(std::list<std::vector<int>>& xy) //랜덤으로 생성 // 만
 	while (true) // 멀티스레드를 위해 무한 반복 
 	{
 
-		int x = random(32, 132);
+		int x = (random(1, 30)+10)*3;
 		int y = random(6, 10);
 
 		std::vector<int> xyVector;

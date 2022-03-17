@@ -67,7 +67,7 @@ int main(void) {
 			// 전체적으로 레이스 컨디션 문제 해결 안됨 각 스레드별로 sleep값을 이용해서 문제 발생 횟수가 적어진거임
 			
 			//현재 Function 내에 
-
+			
 			std::future<void> a = std::async(std::launch::async, [&]() {f.MoveFlight(posx, posy); }); //async를 사용했지만 thread 사용해도 동작 같을거라고 예상함
 			
 			std::future<void> b1 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, fire_x, fire_y); });
