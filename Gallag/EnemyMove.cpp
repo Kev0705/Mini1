@@ -9,7 +9,7 @@ void Enemy::EnemyMove() {
 	printf("   ");
 	while (y < 44) {
 		srand(time(NULL));
-		int i = random(3);//3가지 경우의 수를 랜덤하게 생성
+		int i = random(0, 2);//3가지 경우의 수를 랜덤하게 생성
 		switch (i)
 		{
 		case 0:

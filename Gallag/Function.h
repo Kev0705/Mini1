@@ -2,6 +2,12 @@
 #include "Main.h"
 #include <tuple>
 
+struct Enemycord  {
+    int x;
+    int y;
+};
+
+
 class Function {
 	
 private:
