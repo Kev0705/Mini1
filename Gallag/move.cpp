@@ -15,10 +15,10 @@ void Function::MoveFlight(int& posx, int& posy) // main.cpp 내에서 선언된 posx,p
 			int y1 = posy;
 
 			if (GetAsyncKeyState(VK_LEFT) & 0x8000) { //왼쪽
-				posx -= 2;
+				posx -= 1;
 			}
 			if (GetAsyncKeyState(VK_RIGHT) & 0x8000) { //오른쪽
-				posx += 2;
+				posx += 1;
 			}
 			if (GetAsyncKeyState(VK_UP) & 0x8000) { //위
 				posy -= 1;

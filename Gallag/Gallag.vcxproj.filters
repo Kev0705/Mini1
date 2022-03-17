@@ -77,18 +77,6 @@
     <ClCompile Include="TimeDelay.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="EnemyUnit.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="EnemyStats.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="EnemyMove.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="EnemyCreate.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="enemyspawn.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -96,6 +84,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="random.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="crush.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Crash.cpp">
