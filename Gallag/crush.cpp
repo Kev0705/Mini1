@@ -28,6 +28,18 @@ void Function::fire_enemy_crush(std::vector<std::vector<int>>& xy_fire, std::lis
 void Function::my_enemy_crush(int& posx, int& posy, std::list<std::vector<int>>& xy_enemy) {
 	while (true)
 	{
-
+		for (std::list<std::vector<int>>::iterator IterEnemy = xy_enemy.begin(); IterEnemy != xy_enemy.end();) {
+			std::vector<int> myVector(2);
+			myVector[0] = posx+1;
+			myVector[1] = posy;
+			
+			if (myVector == *IterEnemy) {
+				m1.lock();
+				IterEnemy = xy_enemy.erase(IterEnemy);
+				m1.unlock();
+				continue;
+			}
+			IterEnemy++;
+		}
 	}
 }

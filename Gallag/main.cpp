@@ -87,6 +87,7 @@ int main(void) {
 			//std::future<void> d = std::async(std::launch::async, [&]() { /*fuction*/});
 
 			std::future<void> d1 = std::async(std::launch::async, [&]() {f.fire_enemy_crush(xy_fire, xy_enemy); });
+			std::future<void> d2 = std::async(std::launch::async, [&]() {f.my_enemy_crush(posx, posy, xy_enemy); });
 
 		}
 		else if (page == SCORE) 
