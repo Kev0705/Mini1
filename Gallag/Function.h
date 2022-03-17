@@ -14,7 +14,9 @@ public:
     void MoveFlight(int &posx, int &posy); //mutex m1 사용
     void FireShoot(int &posx, int &posy,int& fire_x, int& fire_y); //mutex m1 사용
     void bullet();
-    void CreatEnemy(); //mutex m1 사용
+    void CreatEnemy(std::list<std::vector<int>> &xy); //mutex m1 사용
+    void MoveEnemy(std::list<std::vector<int>>& xy);
+    void DeleteEnemy(std::list<std::vector<int>>& xy);
 };
 
 class Select : Function

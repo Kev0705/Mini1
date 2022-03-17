@@ -24,6 +24,7 @@ int main(void) {
 	if (!fin) {
 		std::ofstream fout(curDir);
 	}
+	std::list<std::vector<int>> xy;
 
 	//현재 score 제대로 동작 안함
 		//현재 score 제대로 동작 안함
@@ -78,8 +79,8 @@ int main(void) {
 			std::future<void> b9 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, fire_x, fire_y); });
 			std::future<void> b10 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, fire_x, fire_y); });
 
-			std::future<void> c = std::async(std::launch::async, [&]() {f.CreatEnemy(); });
-
+			std::future<void> c1 = std::async(std::launch::async, [&]() {f.CreatEnemy(xy); });
+			std::future<void> c2 = std::async(std::launch::async, [&]() {f.MoveEnemy(xy); });
 			//std::future<void> d = std::async(std::launch::async, [&]() { /*fuction*/});
 
 
