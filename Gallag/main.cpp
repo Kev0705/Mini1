@@ -39,6 +39,7 @@ int main(void) {
 	int fire_x; //현재 이 변수 사용 x 관리용
 	int fire_y; //현재 이 변수 사용 x 관리용
 
+
 	startmenu.logo();
 	startmenu.menu();
 

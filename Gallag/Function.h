@@ -17,6 +17,7 @@ public:
     void CreatEnemy(std::list<std::vector<int>>& xy); //mutex m1 »ç¿ë
     void MoveEnemy(std::list<std::vector<int>>& xy);
     void DeleteEnemy(std::list<std::vector<int>>& xy);
+    void Crash(int& posx, int& posy, int& fire_x, int& fire_y, std::list<std::vector<int>>& xy);
 };
 
 class Select : Function
