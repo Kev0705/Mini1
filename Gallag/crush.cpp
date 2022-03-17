@@ -38,9 +38,7 @@ void Function::my_enemy_crush(int& posx, int& posy, std::list<std::vector<int>>&
 			myVector[1] = posy;
 			
 			if (myVector == *IterEnemy) {
-				m1.lock();
-				IterEnemy = xy_enemy.erase(IterEnemy);
-				m1.unlock();
+				//게임종료화면 출력 코드
 				continue;
 			}
 
