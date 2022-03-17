@@ -39,6 +39,8 @@ int main(void) {
 	int posy = 40;
 	int fire_x; //현재 이 변수 사용 x 관리용
 	int fire_y; //현재 이 변수 사용 x 관리용
+
+	int score;
 	
 	startmenu.logo();
 	startmenu.menu();
@@ -61,8 +63,9 @@ int main(void) {
 		{
 			inGame i;
 			Enemy e;
-			
+			score = 0;
 			i.map();
+			f.showScore(score);
 			// 맵 생성 후 멀티스레드 적용 후 무한반복 끝낼때 page값을 리턴하여 빠져나오기
 
 			// 전체적으로 레이스 컨디션 문제 해결 안됨 각 스레드별로 sleep값을 이용해서 문제 발생 횟수가 적어진거임
@@ -86,7 +89,7 @@ int main(void) {
 			std::future<void> c2 = std::async(std::launch::async, [&]() {f.MoveEnemy(xy_enemy); });
 			//std::future<void> d = std::async(std::launch::async, [&]() { /*fuction*/});
 
-			std::future<void> d1 = std::async(std::launch::async, [&]() {f.fire_enemy_crush(xy_fire, xy_enemy); });
+			std::future<void> d1 = std::async(std::launch::async, [&]() {f.fire_enemy_crush(xy_fire, xy_enemy,score); });
 			std::future<void> d2 = std::async(std::launch::async, [&]() {f.my_enemy_crush(posx, posy, xy_enemy); });
 
 		}

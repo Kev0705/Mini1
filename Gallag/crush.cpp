@@ -1,7 +1,7 @@
 #pragma once
 #include "Main.h"
 
-void Function::fire_enemy_crush(std::vector<std::vector<int>>& xy_fire, std::list<std::vector<int>>& xy_enemy) {
+void Function::fire_enemy_crush(std::vector<std::vector<int>>& xy_fire, std::list<std::vector<int>>& xy_enemy, int& score) {
 	while (true)
 	{
 		for (std::vector<std::vector<int>>::iterator IterFire = xy_fire.begin(); IterFire != xy_fire.end();++IterFire) {
@@ -14,6 +14,8 @@ void Function::fire_enemy_crush(std::vector<std::vector<int>>& xy_fire, std::lis
 					gotoxy(EnemyVector[0] - 1, EnemyVector[1]);
 					std::cout << ("   ");
 					m1.unlock();
+					score += 100;
+					showScore(score);
 					IterEnemy = xy_enemy.erase(IterEnemy);
 					continue;
 				}
@@ -42,4 +44,11 @@ void Function::my_enemy_crush(int& posx, int& posy, std::list<std::vector<int>>&
 			IterEnemy++;
 		}
 	}
+}
+
+void Function::showScore(int score) {
+	m1.lock();
+	gotoxy(145, 3);
+	std::cout << "score : " << score;
+	m1.unlock();
 }
