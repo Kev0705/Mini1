@@ -29,6 +29,8 @@ int main(void) {
 	std::list<std::vector<int>> xy_enemy;
 	std::vector<std::vector<int>> xy_fire(10);
 
+	//score 카운트를 위해서 사용됨
+	std::vector<int> Score_count;
 	//현재 score 제대로 동작 안함
 		//현재 score 제대로 동작 안함
 		//현재 score 제대로 동작 안함
@@ -87,7 +89,7 @@ int main(void) {
 			std::future<void> c2 = std::async(std::launch::async, [&]() {f.MoveEnemy(xy_enemy); });
 			//std::future<void> d = std::async(std::launch::async, [&]() { /*fuction*/});
 
-			std::future<void> d1 = std::async(std::launch::async, [&]() {f.fire_enemy_crush(xy_fire, xy_enemy); });
+			std::future<void> d1 = std::async(std::launch::async, [&]() {f.fire_enemy_crush(xy_fire, xy_enemy-); });
 
 		}
 		else if (page == SCORE)

@@ -89,7 +89,7 @@
     <ClCompile Include="crush.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Crash.cpp">
+    <ClCompile Include="Scorecount.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
