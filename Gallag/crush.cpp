@@ -17,7 +17,6 @@ void Function::fire_enemy_crush(std::vector<std::vector<int>>& xy_fire, std::lis
 					IterEnemy = xy_enemy.erase(IterEnemy);
 					continue;
 				}
-				
 				IterEnemy++;
 			}
 		}
