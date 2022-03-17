@@ -10,7 +10,7 @@ int main(void) {
 	Function f;
 	SelectStartMenu selectstartmenu;
 	TimeDelay T;
-	T.timeSet(0.2);
+	T.timeSet(0.5);
 
 	enum{START,GAME,SCORE}; //START = 0 , GAME = 1, SCORE =2
 	int page = 0; //초기 page는 0
@@ -35,7 +35,7 @@ int main(void) {
 	int posy = 40;
 	int fire_x; //현재 이 변수 사용 x 관리용
 	int fire_y; //현재 이 변수 사용 x 관리용
-
+	
 	startmenu.logo();
 	startmenu.menu();
 	
@@ -43,7 +43,8 @@ int main(void) {
 	{
 		if(page==START)
 		{
-			if (T.timeDelayToken() == 0) {
+			if (T.timeDelayToken() == 0) 
+			{
 				startmenu.PrintCursor();
 			}
 			else
@@ -79,6 +80,12 @@ int main(void) {
 			Score i;
 			i.map();
 			i.showScore(startmenu, page, curDir);
+			
+			_getch();
+			page = START;
+			system("cls");
+			startmenu.logo();
+			startmenu.menu();
 		}
 	}
 
