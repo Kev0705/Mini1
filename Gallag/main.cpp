@@ -24,6 +24,8 @@ int main(void) {
 	if (!fin) {
 		std::ofstream fout(curDir);
 	}
+
+	//xy좌표값을 가지는 list vector 생성
 	std::list<std::vector<int>> xy;
 
 	//현재 score 제대로 동작 안함
