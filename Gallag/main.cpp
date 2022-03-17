@@ -67,7 +67,16 @@ int main(void) {
 
 			std::future<void> a = std::async(std::launch::async, [&]() {f.MoveFlight(posx, posy); }); //async를 사용했지만 thread 사용해도 동작 같을거라고 예상함
 			
-			std::future<void> b = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, fire_x, fire_y); });
+			std::future<void> b1 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, fire_x, fire_y); });
+			std::future<void> b2 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, fire_x, fire_y); });
+			std::future<void> b3 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, fire_x, fire_y); });
+			std::future<void> b4 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, fire_x, fire_y); });
+			std::future<void> b5 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, fire_x, fire_y); });
+			std::future<void> b6 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, fire_x, fire_y); });
+			std::future<void> b7 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, fire_x, fire_y); });
+			std::future<void> b8 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, fire_x, fire_y); });
+			std::future<void> b9 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, fire_x, fire_y); });
+			std::future<void> b10 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, fire_x, fire_y); });
 
 			std::future<void> c = std::async(std::launch::async, [&]() {f.CreatEnemy(); });
 
