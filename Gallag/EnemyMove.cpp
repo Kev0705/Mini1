@@ -1,7 +1,6 @@
 #include "Main.h"
 
 void Enemy::EnemyMove() {
-	
 	Sleep(10);
 	EnemyStats();
 	EnemyUnit(x, y);

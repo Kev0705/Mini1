@@ -167,6 +167,7 @@
     <ClCompile Include="EnemyUnit.cpp" />
     <ClCompile Include="EnemyStats.cpp" />
     <ClCompile Include="EnemyMove.cpp" />
+    <ClCompile Include="EnemyCreate.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
