@@ -20,3 +20,5 @@
 #include "Function.h"
 #include "Unit.h"
 #include "crush.h"
+
+using namespace std;

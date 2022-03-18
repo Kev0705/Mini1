@@ -9,18 +9,27 @@ private:
 
     enum { UP, DOWN, LEFT, RIGHT };
 
+    struct EnemyXY {
+        int x;
+        int y;
+    };
+    EnemyXY XY[20];
+
+ 
+
 public:
     
     void MoveFlight(int &posx, int &posy); //mutex m1 사용
     void FireShoot(int &posx, int &posy, std::vector<int>& xy_fire); //mutex m1 사용
     void bullet();
-    void CreatEnemy(std::list<std::vector<int>>& xy); //mutex m1 사용
-    void MoveEnemy(std::list<std::vector<int>>& xy);
+    void CreatEnemy(int x, int y); //mutex m1 사용
+    void MoveEnemy(int x, int y);
     void DeleteEnemy(std::list<std::vector<int>>& xy);
     void fire_enemy_crush(std::vector<std::vector<int>>& xy_fire, std::list<std::vector<int>>& xy_enemy, std::list<int>& Score_Count);
     void my_enemy_crush(int& posx, int& posy, std::list<std::vector<int>>& xy_enemy);
     void Crash(int& posx, int& posy, int& fire_x, int& fire_y, std::list<std::vector<int>>& xy);
     void Scorecount(std::list<int>& Score_Count);
+    void Life(int x, int y);
 };
 
 class Select : Function

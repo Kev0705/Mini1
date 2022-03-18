@@ -28,10 +28,10 @@ int main(void) {
 	//xy좌표값을 가지는 list vector 생성
 	std::list<std::vector<int>> xy_enemy;
 	std::vector<std::vector<int>> xy_fire(10);
-
+	std::list<int> mycount;
 	//score 카운트를 위해서 사용됨
 	std::vector<int> Score_count;
-	//현재 score 제대로 동작 안함
+	//현재 score 제대로 동작 안함std::list<int>& Score_Count
 		//현재 score 제대로 동작 안함
 		//현재 score 제대로 동작 안함
 		//현재 score 제대로 동작 안함
@@ -41,6 +41,13 @@ int main(void) {
 	int posy = 40;
 	int fire_x; //현재 이 변수 사용 x 관리용
 	int fire_y; //현재 이 변수 사용 x 관리용
+	struct EnemyXY {
+		int x;
+		int y;
+	} ;
+	struct EnemyXY XY;
+	XY.x = NULL;
+	XY.y = NULL;
 
 
 	startmenu.logo();
@@ -85,11 +92,12 @@ int main(void) {
 			std::future<void> b9 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[8]); });
 			std::future<void> b10 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[9]); });
 
-			std::future<void> c1 = std::async(std::launch::async, [&]() {f.CreatEnemy(xy_enemy); });
-			std::future<void> c2 = std::async(std::launch::async, [&]() {f.MoveEnemy(xy_enemy); });
+			std::future<void> c1 = std::async(std::launch::async, [&]() {f.CreatEnemy(XY.x, XY.y); });
+//			std::future<void> c2 = std::async(std::launch::async, [&]() {f.MoveEnemy(xy_enemy); });
 			//std::future<void> d = std::async(std::launch::async, [&]() { /*fuction*/});
 
-			std::future<void> d1 = std::async(std::launch::async, [&]() {f.fire_enemy_crush(xy_fire, xy_enemy-); });
+			std::future<void> d1 = std::async(std::launch::async, [&]() {f.fire_enemy_crush(xy_fire, xy_enemy, mycount); });
+			
 
 		}
 		else if (page == SCORE)
