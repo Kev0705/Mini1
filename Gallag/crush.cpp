@@ -1,8 +1,8 @@
 #pragma once
 #include "Main.h"
 
-void Function::fire_enemy_crush(std::vector<std::vector<int>>& xy_fire, std::list<std::vector<int>>& xy_enemy, int& score) {
-	while (true)
+void Function::fire_enemy_crush(std::vector<std::vector<int>>& xy_fire, std::list<std::vector<int>>& xy_enemy, int& score, bool& isLoop) {
+	while (isLoop)
 	{
 		for (std::vector<std::vector<int>>::iterator IterFire = xy_fire.begin(); IterFire != xy_fire.end();++IterFire) {
 			//std::vector<int> fireVector = *IterFire;
@@ -29,8 +29,8 @@ void Function::fire_enemy_crush(std::vector<std::vector<int>>& xy_fire, std::lis
 }
 
 
-void Function::my_enemy_crush(int& posx, int& posy, std::list<std::vector<int>>& xy_enemy) {
-	while (true)
+void Function::my_enemy_crush(int& posx, int& posy, std::list<std::vector<int>>& xy_enemy, bool& isLoop, int &page) {
+	while (isLoop)
 	{
 		for (std::list<std::vector<int>>::iterator IterEnemy = xy_enemy.begin(); IterEnemy != xy_enemy.end();) {
 			std::vector<int> myVector(2);
@@ -38,8 +38,9 @@ void Function::my_enemy_crush(int& posx, int& posy, std::list<std::vector<int>>&
 			myVector[1] = posy;
 			
 			if (myVector == *IterEnemy) {
-				//게임종료화면 출력 코드
-				continue;
+				isLoop = false;//게임종료화면 출력 코드
+				page = 3;
+				break;
 			}
 
 			IterEnemy++;

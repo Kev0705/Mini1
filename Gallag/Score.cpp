@@ -7,7 +7,6 @@ void Score::map()
 
 	BackScreen();
 	SideScreen();
-	Esc();
 };
 
 void Score::showScore(StartScreen S, int& page, const char *dir)

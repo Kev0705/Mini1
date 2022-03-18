@@ -33,7 +33,20 @@ public:
 	void BackScreen();
 	void SideScreen();
 	void Sideline();
-	void Esc();
 	void map();
 };
 
+
+class UserInterface : inGame {
+private:
+	int x=138;
+	int y=5;
+public:
+	//UserInterface(int ax, int ay) { x = ax; y = ay; }
+
+	void esc();
+	void life(); //하트 asc코드 확인하고 해당 부분 아군기체 피해시 깍는 로직 필요
+	void score(); // 점수 쌓는 로직 생성 후 추가 필요
+	void ReturnScreen();
+	void UserControlGuide();
+};

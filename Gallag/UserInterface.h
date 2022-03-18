@@ -1,12 +1,5 @@
 #pragma once
 #include "Main.h"
-
-class UserInterface 
-{
-
-
-};
-
 /*
 class inGame : UserInterface
 {
@@ -26,3 +19,4 @@ public:
 	}
 };
 */
+

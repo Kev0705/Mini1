@@ -1,9 +1,9 @@
 #pragma once
 #include "Main.h"
 
-void Function::CreatEnemy(std::list<std::vector<int>>& xy_enemy) //랜덤으로 생성 // 만들다 맘
+void Function::CreatEnemy(std::list<std::vector<int>>& xy_enemy, bool& isLoop) //랜덤으로 생성 // 만들다 맘
 {
-	while (true) // 멀티스레드를 위해 무한 반복 
+	while (isLoop) // 멀티스레드를 위해 무한 반복 
 	{
 
 		int x = (random(1, 30)+10)*3;
@@ -30,14 +30,10 @@ void Function::CreatEnemy(std::list<std::vector<int>>& xy_enemy) //랜덤으로 생성
 	}
 }
 
-void Function::DeleteEnemy(std::list<std::vector<int>>& xy) {
-	
-}
-
 //test용으로 만듬 좌표값 잘 받아오는지만 확인
-void Function::MoveEnemy(std::list<std::vector<int>>& xy_enemy) {
+void Function::MoveEnemy(std::list<std::vector<int>>& xy_enemy, bool& isLoop) {
 
-	while (true) {
+	while (isLoop) {
 		//list 요소를 반복 << list요소 = vector(x,y)값을 가리키고 있음
 		for (std::list<std::vector<int>>::iterator IterPos = xy_enemy.begin(); IterPos != xy_enemy.end();) {
 			std::vector<int> enemyVector = *IterPos;
