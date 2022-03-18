@@ -26,8 +26,6 @@ int main(void) {
 		std::ofstream fout(curDir);
 	}
 
-	
-
 	//현재 score 제대로 동작 안함
 		//현재 score 제대로 동작 안함
 		//현재 score 제대로 동작 안함
@@ -83,7 +81,7 @@ int main(void) {
 			try
 			{
 				std::future<void> a = std::async(std::launch::async, [&]() {f.MoveFlight(posx, posy, isLoop); }); //async를 사용했지만 thread 사용해도 동작 같을거라고 예상함
-
+				
 				std::future<void> b1 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[0], isLoop); });
 				std::future<void> b2 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[1], isLoop); });
 				std::future<void> b3 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[2], isLoop); });
@@ -97,10 +95,11 @@ int main(void) {
 
 				std::future<void> c1 = std::async(std::launch::async, [&]() {f.CreatEnemy(xy_enemy, isLoop); });
 				std::future<void> c2 = std::async(std::launch::async, [&]() {f.MoveEnemy(xy_enemy, isLoop); });
-				//std::future<void> d = std::async(std::launch::async, [&]() { /*fuction*/});
 
 				std::future<void> d1 = std::async(std::launch::async, [&]() {f.fire_enemy_crush(xy_fire, xy_enemy, score, isLoop); });
 				std::future<void> d2 = std::async(std::launch::async, [&]() {f.my_enemy_crush(posx, posy, xy_enemy, isLoop, page); });
+
+				std::future<void> e1 = std::async(std::launch::async, [&]() {f.esc(isLoop, page); });
 
 			}
 			catch (const std::exception& ex)
@@ -133,8 +132,6 @@ int main(void) {
 			startmenu.menu();
 		}
 	}
-
-	//f.MoveFlight(startmenu.posx,startmenu.posy);
 
 	return 0;
 }

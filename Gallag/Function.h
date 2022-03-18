@@ -19,6 +19,7 @@ public:
     void fire_enemy_crush(std::vector<std::vector<int>>& xy_fire, std::list<std::vector<int>>& xy_enemy, int& score, bool& isLoop);
     void my_enemy_crush(int& posx, int& posy, std::list<std::vector<int>>& xy_enemy, bool& isLoop, int& page);
     void showScore(int score);
+    void esc(bool& isLoop, int& page);
 };
 
 class Select : Function
