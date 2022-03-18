@@ -152,6 +152,7 @@
     <ClCompile Include="crush.cpp" />
     <ClCompile Include="enemyspawn.cpp" />
     <ClCompile Include="fire.cpp" />
+    <ClCompile Include="GameOver.cpp" />
     <ClCompile Include="Life.cpp" />
     <ClCompile Include="logo.cpp" />
     <ClCompile Include="gotoxy.cpp" />
