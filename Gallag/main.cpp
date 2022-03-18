@@ -113,8 +113,8 @@ int main(void) {
 		{
 			Score i;
 			i.map();
-			i.showScore(startmenu, page, curDir);
-			
+			i.showScore(curDir);
+			//go start page
 			_getch();
 			page = START;
 			system("cls");
@@ -122,9 +122,13 @@ int main(void) {
 			startmenu.menu();
 		}
 		else if (page == OVER) {
-			gotoxy(70, 25);
-			printf("-----------game over-----------");
+			GameOver g;
+			g.showLogo();
 			isLoop = true;
+			g.scoreSave(curDir,score);
+			g.showScore(curDir,score);
+
+			//go start page
 			_getch();
 			page = START;
 			system("cls");
