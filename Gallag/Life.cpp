@@ -11,7 +11,7 @@ void Function::LifeCount(int life, bool& isLoop, int& page) {
 
 void Function::ShowLife(int Life) {
 	m1.lock();
-	gotoxy(100, 0);
+	gotoxy(80, 4);
 	std::cout<<"Life:" << Life;
 	m1.unlock();
 }

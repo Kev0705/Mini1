@@ -146,7 +146,6 @@
     <ClInclude Include="Unit.h" />
     <ClInclude Include="UserInterface.h" />
     <ClInclude Include="Util.h" />
-    <ClInclude Include="cursor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="crush.cpp" />

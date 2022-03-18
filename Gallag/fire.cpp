@@ -34,6 +34,7 @@ void Function::FireShoot(int &posx, int &posy, std::vector<int>& xy_fire, bool& 
 					gotoxy(xy_fire[0], xy_fire[1]);
 					std::cout << ' ';
 					m1.unlock();
+					
 
 					xy_fire[1]--; //buellt의 y좌표를 하나씩 위로
 					
@@ -45,6 +46,7 @@ void Function::FireShoot(int &posx, int &posy, std::vector<int>& xy_fire, bool& 
 						std::cout << ' ';
 
 						m1.unlock();
+						
 
 						xy_fire.pop_back();
 						xy_fire.pop_back();

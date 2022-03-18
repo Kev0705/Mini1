@@ -41,33 +41,34 @@ void Function::MoveEnemy(std::list<std::vector<int>>& xy_enemy, bool& isLoop) {
 			//y축 map 좌표 = 45. map에 도달하면 list요소 삭제 및 콘솔상의 enemy 삭제
 			if (enemyVector[1] == 44) {
 				m1.lock();
-				gotoxy(enemyVector[0]-1, enemyVector[1]);
+				gotoxy(enemyVector[0] - 1, enemyVector[1]);
 				std::cout << ("   ");
 				m1.unlock();
-				
-				
-				m1.lock();
+
 				IterPos = xy_enemy.erase(IterPos);
-				m1.unlock();
+
 				continue;
 			}
 			m1.lock();
 			gotoxy(enemyVector[0] - 1, enemyVector[1]);
 			std::cout << ("   ");
 			m1.unlock();
+			
 
 			m1.lock();
 			enemyVector[1]++;
 			*IterPos = enemyVector;
 			m1.unlock();
+			
 
 			m1.lock();
 			gotoxy(enemyVector[0] - 1, enemyVector[1]);
 			std::cout << ("<=>");
 			m1.unlock();
 			++IterPos;
+			enemyVector.clear();
 			//현재 좌표 clear 후 밑으로 이동하여 enemy 출력
-			
+
 		}
 
 		Sleep(300);

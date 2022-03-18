@@ -84,10 +84,9 @@ int main(void) {
 			// 전체적으로 레이스 컨디션 문제 해결 안됨 각 스레드별로 sleep값을 이용해서 문제 발생 횟수가 적어진거임
 
 			//현재 Function 내에 
-			try
-			{
+	
 				std::future<void> a = std::async(std::launch::async, [&]() {f.MoveFlight(posx, posy, isLoop); }); //async를 사용했지만 thread 사용해도 동작 같을거라고 예상함
-				
+
 				std::future<void> b1 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[0], isLoop); });
 				std::future<void> b2 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[1], isLoop); });
 				std::future<void> b3 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[2], isLoop); });
@@ -98,7 +97,7 @@ int main(void) {
 				std::future<void> b8 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[7], isLoop); });
 				std::future<void> b9 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[8], isLoop); });
 				std::future<void> b10 = std::async(std::launch::async, [&]() {f.FireShoot(posx, posy, xy_fire[9], isLoop); });
-
+			
 				std::future<void> c1 = std::async(std::launch::async, [&]() {f.CreatEnemy(xy_enemy, isLoop); });
 				std::future<void> c2 = std::async(std::launch::async, [&]() {f.MoveEnemy(xy_enemy, isLoop); });
 
@@ -111,14 +110,6 @@ int main(void) {
 
 				std::future<void> e1 = std::async(std::launch::async, [&]() {f.esc(isLoop, page); });
 
-			}
-			catch (const std::exception& ex)
-			{
-				std::cout << "hello";
-			}
-
-			std::future<void> d1 = std::async(std::launch::async, [&]() {f.fire_enemy_crush(xy_fire, xy_enemy, score, isLoop); });
-			std::future<void> d2 = std::async(std::launch::async, [&]() {f.my_enemy_crush(posx, posy, xy_enemy, isLoop, page, life); });
 
 		}
 		else if (page == SCORE)

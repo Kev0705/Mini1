@@ -18,7 +18,7 @@ void Function::fire_enemy_crush(std::vector<std::vector<int>>& xy_fire, std::lis
 					showScore(score);
 					m1.lock();
 					IterEnemy = xy_enemy.erase(IterEnemy);
-					xy_enemy.sort();
+					
 					m1.unlock();
 					continue;
 				}
