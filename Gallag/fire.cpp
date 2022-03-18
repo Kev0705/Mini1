@@ -1,11 +1,11 @@
 #include "Main.h"
 
-void Function::FireShoot(int &posx, int &posy, std::vector<int>& xy_fire)
+void Function::FireShoot(int &posx, int &posy, std::vector<int>& xy_fire, bool& isLoop)
 {
 	TimeDelay F;
 	F.timeSet(0.05);
 
-	while (true)
+	while(isLoop)
 	{
 		if (_kbhit())
 		{

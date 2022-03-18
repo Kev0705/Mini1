@@ -166,7 +166,7 @@
     <ClCompile Include="startcreen.cpp" />
     <ClCompile Include="startscreen_cursor.cpp" />
     <ClCompile Include="TimeDelay.cpp" />
-    <ClCompile Include="Life.cpp" />
+    <ClCompile Include="UserInterface.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

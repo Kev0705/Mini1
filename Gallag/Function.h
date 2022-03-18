@@ -19,14 +19,13 @@ private:
 
 public:
     
-    void MoveFlight(int &posx, int &posy); //mutex m1 사용
-    void FireShoot(int &posx, int &posy, std::vector<int>& xy_fire); //mutex m1 사용
+    void MoveFlight(int &posx, int &posy, bool &isLoop); //mutex m1 사용
+    void FireShoot(int &posx, int &posy, std::vector<int>& xy_fire, bool& isLoop); //mutex m1 사용
     void bullet();
-    void CreatEnemy(int x, int y); //mutex m1 사용
-    void MoveEnemy(int x, int y);
-    void DeleteEnemy(std::list<std::vector<int>>& xy);
-    void fire_enemy_crush(std::vector<std::vector<int>>& xy_fire, std::list<std::vector<int>>& xy_enemy, int& score);
-    void my_enemy_crush(int& posx, int& posy, std::list<std::vector<int>>& xy_enemy);
+    void CreatEnemy(std::list<std::vector<int>> &xy, bool& isLoop); //mutex m1 사용
+    void MoveEnemy(std::list<std::vector<int>>& xy, bool& isLoop);
+    void fire_enemy_crush(std::vector<std::vector<int>>& xy_fire, std::list<std::vector<int>>& xy_enemy, int& score, bool& isLoop);
+    void my_enemy_crush(int& posx, int& posy, std::list<std::vector<int>>& xy_enemy, bool& isLoop, int& page);
     void showScore(int score);
 };
 

@@ -1,12 +1,12 @@
 #pragma once
 #include "Main.h"
 
-void Function::MoveFlight(int& posx, int& posy) // main.cpp 내에서 선언된 posx,posy를 직접적으로 받아 조정
+void Function::MoveFlight(int& posx, int& posy, bool& isLoop) // main.cpp 내에서 선언된 posx,posy를 직접적으로 받아 조정
 {
 	TimeDelay Move; //move 딜레이
 	Move.timeSet(0.1);
 
-	while (true)
+	while (isLoop)
 	{
 		
 		if (Move.timeDelay() == true) {

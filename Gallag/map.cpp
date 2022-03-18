@@ -29,10 +29,6 @@ void inGame::Sideline()
 		putchxy(x + 105, y, '#');
 }
 
-void inGame::Esc() {
-	gotoxy(0, 0);
-	printf("ESC:돌아가기");
-}
 
 /*
 bool inGame::KeyScan() {
@@ -54,7 +50,6 @@ void inGame::map()
 	BackScreen();
 	SideScreen();
 	Sideline();
-	Esc();
 
 	//void BackScreen();
 	//void SideScreen();
