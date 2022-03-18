@@ -29,8 +29,8 @@ void Function::MoveFlight(int& posx, int& posy, bool& isLoop) // main.cpp ³»¿¡¼­
 
 
 
-			if (posx < 30) posx += 1;
-			if (posx >= 132) posx -= 1;
+			if (posx <= 30) posx += 1;
+			if (posx > 132) posx -= 1;
 
 			if (posy <= 10) posy += 1;
 			if (posy >= 45) posy -= 1;
