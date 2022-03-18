@@ -25,8 +25,10 @@ public:
     void CreatEnemy(std::list<std::vector<int>> &xy, bool& isLoop); //mutex m1 »ç¿ë
     void MoveEnemy(std::list<std::vector<int>>& xy, bool& isLoop);
     void fire_enemy_crush(std::vector<std::vector<int>>& xy_fire, std::list<std::vector<int>>& xy_enemy, int& score, bool& isLoop);
-    void my_enemy_crush(int& posx, int& posy, std::list<std::vector<int>>& xy_enemy, bool& isLoop, int& page);
+    void my_enemy_crush(int& posx, int& posy, std::list<std::vector<int>>& xy_enemy, bool& isLoop, int& page, int& life);
     void showScore(int score);
+    void LifeCount(int life, bool& isLoop, int& page);
+    void ShowLife(int Life);
 };
 
 class Select : Function

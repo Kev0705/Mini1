@@ -37,6 +37,8 @@ int main(void) {
 	int fire_y; //현재 이 변수 사용 x 관리용
 
 	int score;
+	int life;
+	
 
 	bool isLoop=true;
 	
@@ -63,14 +65,19 @@ int main(void) {
 			Enemy e;
 			UserInterface u;
 			score = 0;
+			life = 3;
 			i.map();
 			f.showScore(score);
 			u.esc();
 			u.UserControlGuide();
+			f.ShowLife(life);
+			
+			
 
 			//xy좌표값을 가지는 list vector 생성
 			std::list<std::vector<int>> xy_enemy;
 			std::vector<std::vector<int>> xy_fire(10);
+		
 
 			int posx = 85;
 			int posy = 40;
@@ -98,8 +105,12 @@ int main(void) {
 				std::future<void> c2 = std::async(std::launch::async, [&]() {f.MoveEnemy(xy_enemy, isLoop); });
 				//std::future<void> d = std::async(std::launch::async, [&]() { /*fuction*/});
 
+			
+
 				std::future<void> d1 = std::async(std::launch::async, [&]() {f.fire_enemy_crush(xy_fire, xy_enemy, score, isLoop); });
-				std::future<void> d2 = std::async(std::launch::async, [&]() {f.my_enemy_crush(posx, posy, xy_enemy, isLoop, page); });
+				std::future<void> d2 = std::async(std::launch::async, [&]() {f.my_enemy_crush(posx, posy, xy_enemy, isLoop, page, life); });
+
+				
 
 			}
 			catch (const std::exception& ex)
@@ -107,8 +118,8 @@ int main(void) {
 				std::cout << "hello";
 			}
 
-			std::future<void> d1 = std::async(std::launch::async, [&]() {f.fire_enemy_crush(xy_fire, xy_enemy,score); });
-			std::future<void> d2 = std::async(std::launch::async, [&]() {f.my_enemy_crush(posx, posy, xy_enemy); });
+			std::future<void> d1 = std::async(std::launch::async, [&]() {f.fire_enemy_crush(xy_fire, xy_enemy, score, isLoop); });
+			std::future<void> d2 = std::async(std::launch::async, [&]() {f.my_enemy_crush(posx, posy, xy_enemy, isLoop, page, life); });
 
 		}
 		else if (page == SCORE)

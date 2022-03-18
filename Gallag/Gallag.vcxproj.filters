@@ -92,5 +92,8 @@
     <ClCompile Include="UserInterface.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Life.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

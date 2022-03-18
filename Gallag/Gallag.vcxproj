@@ -152,6 +152,7 @@
     <ClCompile Include="crush.cpp" />
     <ClCompile Include="enemyspawn.cpp" />
     <ClCompile Include="fire.cpp" />
+    <ClCompile Include="Life.cpp" />
     <ClCompile Include="logo.cpp" />
     <ClCompile Include="gotoxy.cpp" />
     <ClCompile Include="main.cpp" />
@@ -160,7 +161,6 @@
     <ClCompile Include="print.cpp" />
     <ClCompile Include="random.cpp" />
     <ClCompile Include="Score.cpp" />
-    <ClCompile Include="Scorecount.cpp" />
     <ClCompile Include="selectstartmenu.cpp" />
     <ClCompile Include="stagesize.cpp" />
     <ClCompile Include="startcreen.cpp" />

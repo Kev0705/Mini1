@@ -30,7 +30,7 @@ void Function::fire_enemy_crush(std::vector<std::vector<int>>& xy_fire, std::lis
 }
 
 
-void Function::my_enemy_crush(int& posx, int& posy, std::list<std::vector<int>>& xy_enemy, bool& isLoop, int &page) {
+void Function::my_enemy_crush(int& posx, int& posy, std::list<std::vector<int>>& xy_enemy, bool& isLoop, int &page, int &life) {
 	while (isLoop)
 	{
 		for (std::list<std::vector<int>>::iterator IterEnemy = xy_enemy.begin(); IterEnemy != xy_enemy.end();) {
@@ -39,8 +39,14 @@ void Function::my_enemy_crush(int& posx, int& posy, std::list<std::vector<int>>&
 			myVector[1] = posy;
 			
 			if (myVector == *IterEnemy) {
-				isLoop = false;//게임종료화면 출력 코드
-				page = 3;
+				IterEnemy = xy_enemy.erase(IterEnemy);
+				life -= 1;
+				ShowLife(life);
+				if (life == 0)
+				{
+					isLoop = false;//게임종료화면 출력 코드
+					page = 3;
+				}
 				break;
 			}
 
