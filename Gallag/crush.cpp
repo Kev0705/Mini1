@@ -87,3 +87,19 @@ void Function::showScore(int score) {
 	std::cout << "score : " << score;
 	m1.unlock();
 }
+
+void Function::esc(bool& isLoop, int& page) {
+
+	TimeDelay Esc; //esc 딜레이
+	Esc.timeSet(0.1);
+
+	while (isLoop) {
+		if (Esc.timeDelay() == true) {
+			if (GetAsyncKeyState(ESC) & 0x8000) { //왼쪽
+				isLoop = false;//게임종료화면 출력 코드
+				page = 3;
+				break;
+			}
+		}
+	}
+}

@@ -29,6 +29,7 @@ public:
     void showScore(int score);
     void LifeCount(int life, bool& isLoop, int& page);
     void ShowLife(int Life);
+    void esc(bool& isLoop, int& page);
 };
 
 class Select : Function
