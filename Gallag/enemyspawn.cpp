@@ -1,29 +1,19 @@
 #pragma once
 #include "Main.h"
 
-void Function::CreatEnemy(int x, int y) //랜덤으로 생성 // 만들다 맘
+void Function::CreatEnemy(std::list<std::vector<int>>& xy_enemy) //랜덤으로 생성 // 만들다 맘
 {
-	
-	for (int i = 0; i < 20; i++)
-	{
-		XY[i].x = (random(1, 30) + 10) * 3;
-		XY[i].y = random(6, 10);
-	}
 	while (true) // 멀티스레드를 위해 무한 반복 
 	{
 
-		
-		for (int i = 0; i < 20; i++)
-		{
-			Sleep(300); //적 생성 쿨타임
-			int x1 = XY[i].x;
-			int y1 = XY[i].y;
-			gotoxy(x1, y1);
-			printf("<=>");
-			
-		}	
-	}
-}
+		int x = (random(1, 30)+10)*3;
+		int y = random(6, 10);
+
+		std::vector<int> enemyVector;
+		enemyVector.push_back(x);
+		enemyVector.push_back(y);
+		xy_enemy.push_back(enemyVector);
+
 
 void Function::MoveEnemy(int x, int y)
 {
@@ -42,7 +32,7 @@ void Function::DeleteEnemy(std::list<std::vector<int>>& xy) {
 }
 
 //test용으로 만듬 좌표값 잘 받아오는지만 확인
-/*void Function::MoveEnemy(std::list<std::vector<int>>& xy_enemy) {
+void Function::MoveEnemy(std::list<std::vector<int>>& xy_enemy) {
 
 	while (true) {
 		//list 요소를 반복 << list요소 = vector(x,y)값을 가리키고 있음
