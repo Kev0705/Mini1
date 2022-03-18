@@ -18,6 +18,7 @@ void Function::fire_enemy_crush(std::vector<std::vector<int>>& xy_fire, std::lis
 					showScore(score);
 					m1.lock();
 					IterEnemy = xy_enemy.erase(IterEnemy);
+					xy_enemy.sort();
 					m1.unlock();
 					continue;
 				}
@@ -37,13 +38,38 @@ void Function::my_enemy_crush(int& posx, int& posy, std::list<std::vector<int>>&
 			std::vector<int> myVector(2);
 			myVector[0] = posx+1;
 			myVector[1] = posy;
+			std::vector<int> myVector2(2);
+			myVector2[0] = posx;
+			myVector2[1] = posy;
+			std::vector<int> myVector3(2);
+			myVector3[0] = posx+2;
+			myVector3[1] = posy;
+			std::vector<int> myVector4(2);
+			myVector4[0] = posx + 3;
+			myVector4[1] = posy;
+			std::vector<int> myVector5(2);
+			myVector5[0] = posx -1;
+			myVector5[1] = posy;
+
 			
-			if (myVector == *IterEnemy) {
+			if (myVector == *IterEnemy || myVector2 == *IterEnemy || myVector3==*IterEnemy || myVector4==*IterEnemy || myVector5==*IterEnemy) {
+				std::vector<int> EnemyVector = *IterEnemy;
+				m1.lock();				
+				gotoxy(EnemyVector[0]-1, EnemyVector[1]);
+				printf("   ");
+				m1.unlock();
+				m1.lock();
 				IterEnemy = xy_enemy.erase(IterEnemy);
+				m1.unlock();
 				life -= 1;
+			
 				ShowLife(life);
 				if (life == 0)
 				{
+					m1.lock();
+					gotoxy(myVector[0]-1, myVector[1]);
+					printf("   ");
+					m1.unlock();
 					isLoop = false;//게임종료화면 출력 코드
 					page = 3;
 				}
