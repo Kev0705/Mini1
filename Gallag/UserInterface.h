@@ -1,12 +1,5 @@
 #pragma once
 #include "Main.h"
-
-class UserInterface 
-{
-
-
-};
-
 /*
 class inGame : UserInterface
 {
@@ -24,5 +17,11 @@ public:
 	void ReturnScreen() {
 		gotoxy(x, y); printf("R: 이전화면");
 	}
+	void UserControlGuide(){
+		gotoxy(x,y); printf("       ↑\n");
+		gotoxy(x,y+1); printf("이동: ←↓→ \n");
+		gotoxy(x,y+2); printf("공격: spacebar"\n);
+		
 };
 */
+

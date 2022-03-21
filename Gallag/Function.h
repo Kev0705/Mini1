@@ -3,18 +3,33 @@
 #include <tuple>
 
 class Function {
-	
+
 private:
     std::mutex m1; // 해당 <mutex> m1
 
     enum { UP, DOWN, LEFT, RIGHT };
-	
+
+    struct EnemyXY {
+        int x;
+        int y;
+    };
+    EnemyXY XY[20];
+
+ 
+
 public:
     
-    void MoveFlight(int &posx, int &posy); //mutex m1 사용
-    void FireShoot(int &posx, int &posy,int& fire_x, int& fire_y); //mutex m1 사용
+    void MoveFlight(int &posx, int &posy, bool &isLoop); //mutex m1 사용
+    void FireShoot(int &posx, int &posy, std::vector<int>& xy_fire, bool& isLoop); //mutex m1 사용
     void bullet();
-    void CreatEnemy(); //mutex m1 사용
+    void CreatEnemy(std::list<std::vector<int>> &xy, bool& isLoop); //mutex m1 사용
+    void MoveEnemy(std::list<std::vector<int>>& xy, bool& isLoop);
+    void fire_enemy_crush(std::vector<std::vector<int>>& xy_fire, std::list<std::vector<int>>& xy_enemy, int& score, bool& isLoop);
+    void my_enemy_crush(int& posx, int& posy, std::list<std::vector<int>>& xy_enemy, bool& isLoop, int& page, int& life);
+    void showScore(int score);
+    void LifeCount(int life, bool& isLoop, int& page);
+    void ShowLife(int Life);
+    void esc(bool& isLoop, int& page);
 };
 
 class Select : Function
@@ -28,16 +43,16 @@ class Select : Function
 #define ESC 27
 };
 
-class SelectMenu : Select 
+class SelectMenu : Select
 {
 
 
 };
 
-class SelectStartMenu : SelectMenu 
+class SelectStartMenu : SelectMenu
 {
 private:
     char c;
 public:
-    int MenuSelect(int& x, int&y,int &page);
+    int MenuSelect(int& x, int& y, int& page);
 };

@@ -10,6 +10,7 @@
 #include <mutex>
 #include <tuple>
 #include <thread>
+#include <list>
 
 #include "UserInterface.h"
 #include "Stage.h"
@@ -18,3 +19,5 @@
 #include "Score.h"
 #include "Function.h"
 #include "Unit.h"
+
+#include "GameOver.h"
